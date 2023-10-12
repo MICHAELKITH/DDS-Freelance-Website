@@ -1,13 +1,14 @@
 import React from "react";
-
-function FiverrLogo({ fillColor }) {
+function FiverrLogo() {
   const textStyle = {
-    color: fillColor,  // Use the fillColor prop for text color
-    // Add more styles as needed
+    color: "gold",
+    fontSize: "18px",
+    fontFamily: "Arial, sans-serif",
   };
+  
 
   return (
-    <p style={textStyle}>DDS</p>
+    <p style={textStyle}>Divine Design Studio</p>
   );
 }
 
