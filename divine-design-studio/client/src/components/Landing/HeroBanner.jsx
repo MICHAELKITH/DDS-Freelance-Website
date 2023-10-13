@@ -16,8 +16,8 @@ function HomeBanner() {
 
   return (
     <div className="h-[680px] relative bg-cover sm:none">
-    <div className="absolute top-0 right-0 w-[110vw] h-full transition-opacity z-0">
-      <Image
+    <div className="absolute top-0 right-0 w-[110vw] h-full transition-opacity z-0 bg-black">
+      {/* <Image
         alt="hero"
         src="/music.jpeg"
         fill
@@ -64,7 +64,7 @@ function HomeBanner() {
         className={`${
           image === 6 ? "opacity-100" : "opacity-0"
         } transition-all duration-1000`}
-      />
+      /> */}
     </div>
     <div className="z-10 relative w-[650px] flex justify-center flex-col h-full gap-5 ml-20">
       <h1 className="text-white text-5xl leading-snug">

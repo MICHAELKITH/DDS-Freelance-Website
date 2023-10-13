@@ -203,14 +203,15 @@ function Navbar() {
           </div>
           {!userInfo ? (
             <ul className="flex gap-10 items-center">
+              {/* navbars */}
               {links.map(({ linkName, handler, type }) => {
                 return (
                   <li
                     key={linkName}
                     className={`${
-                      navFixed ? "text-black" : "text-white"
+                      navFixed ? "text-black" : "text-white "
                     } font-medium`}
-                  >
+                  > 
                     {type === "link" && <Link href={handler}>{linkName}</Link>}
                     {type === "button" && (
                       <button onClick={handler}>{linkName}</button>
@@ -220,9 +221,9 @@ function Navbar() {
                         onClick={handler}
                         className={`border   text-md font-semibold py-1 px-3 rounded-sm ${
                           navFixed
-                            ? "border-[#1DBF73] text-[#1DBF73]"
+                            ? "border-[#bfbc1d] text-[#bf631d]"
                             : "border-white text-white"
-                        } hover:bg-[#1DBF73] hover:text-white hover:border-[#1DBF73] transition-all duration-500`}
+                        } hover:bg-[#bfaf1d] hover:text-white hover:border-[#a9bf1d] transition-all duration-500`}
                       >
                         {linkName}
                       </button>
