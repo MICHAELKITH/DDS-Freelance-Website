@@ -53,7 +53,7 @@ function Navbar() {
     { linkName: "Products", handler: "#", type: "link" },
     { linkName: "Contact", handler: "#", type: "link" },
     { linkName: "Sign in", handler: handleLogin, type: "button" },
-    { linkName: "Join", handler: handleSignup, type: "button2" },
+    { linkName: "Create Account", handler: handleSignup, type: "button2" },
   ];
 
   useEffect(() => {
