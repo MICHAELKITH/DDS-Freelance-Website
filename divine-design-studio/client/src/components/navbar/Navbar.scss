@@ -1,3 +1,4 @@
+/* Default styles for larger screens */
 .navbar {
   display: flex;
   flex-direction: column;
@@ -11,7 +12,7 @@
 
   &.active {
     background-color: rgb(218, 218, 52);
-    color: black;
+    color: rgb(0, 0, 0);
 
     button {
       background-color: white !important;
@@ -36,7 +37,7 @@
 
       .dot {
         font-weight: bold;
-        color: #99bf1d;
+        color: #7cbf1d;
       }
     }
     .links {
@@ -100,7 +101,7 @@
 
   hr {
     width: calc(100% - 2px);
-    height: 0;
+    height: 0.5px;
     border-top: 0.5px solid #ebe9e9;
     border-bottom: 0.5px solid #ebe9e9;
   }
@@ -113,5 +114,26 @@
     color: gray;
     font-weight: 300;
     font-family: "Montserrat", sans-serif;
+  }
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 767px) {
+  .navbar {
+    .container {
+      width: 100%;
+      padding: 20px;
+    }
+    .logo{
+      display: none;
+    }
+    .links{
+      display: none;
+    }
+
+    .menu {
+      width: 100%;
+      padding: 10px;
+    }
   }
 }
