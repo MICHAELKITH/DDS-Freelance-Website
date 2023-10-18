@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Featured.scss";
 import { useNavigate } from "react-router-dom";
-
+import Backimg from "/img/WEBBACKDROP.jpg"
 function Featured() {
   const [input, setInput] = useState("");
   const navigate = useNavigate();
@@ -12,11 +12,18 @@ function Featured() {
   return (
     <div className="featured">
       <div className="container">
+        {/* <img src={Backimg} alt=""
+        
+        
+        
+        
+        /> */}
         <div className="left">
           <h1>
-            Freelance <span> Embracing </span> Spiritual Entrepreneurship.
+            Collaborate with <span> freelancers </span><br /> 
+            Embrace <span> spiritual entrepreneurship</span> 
           </h1>
-          <div className="search">
+          {/* <div className="search">
             <div className="searchInput">
               <img src="./img/search.png" alt="" />
               <input
@@ -26,7 +33,7 @@ function Featured() {
               />
             </div>
             <button onClick={handleSubmit}>Search</button>
-          </div>
+          </div> */}
           <div className="popular">
             <span>Popular:</span>
             <button>Technology</button>

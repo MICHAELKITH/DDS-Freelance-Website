@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import newRequest from "../../utils/newRequest";
+import DDS from "/img/DDS.png"
+
 import "./Navbar.scss";
 
 function Navbar() {
@@ -39,15 +41,18 @@ function Navbar() {
       <div className="container">
         <div className="logo">
           <Link className="link" to="/">
-            <span className="text">Divine Design Studio</span>
+            {/* <span className="text">Divine Design</span><br />
+            <span className="text">Studio</span> */}
+            <img className ="Logo" src={DDS} alt="" />
           </Link>
-          <span className="dot">.</span>
+          {/* <span className="dot">.</span> */}
         </div>
         <div className="links">
-          <span>Divine Business</span>
+          <span>Home</span>
           <span>About</span>
-          <span>Language</span>
-          {!currentUser?.isSeller && <span>Become a Seller</span>}
+          <span>Products </span>
+          <span>Services </span>
+          {!currentUser?.isSeller && <span>Become a Freelancer</span>}
           {currentUser ? (
             <div className="user" onClick={() => setOpen(!open)}>
               <img src={currentUser.img || "/img/noavatar.jpg"} alt="" />
@@ -80,7 +85,7 @@ function Navbar() {
             <>
               <Link to="/login" className="link">Sign in</Link>
               <Link className="link" to="/register">
-                <button>Join</button>
+                <button>Create Account</button>
               </Link>
             </>
           )}
@@ -88,37 +93,26 @@ function Navbar() {
       </div>
       {(active || pathname !== "/") && (
         <>
-          <hr />
+          {/* <hr />
           <div className="menu">
             <Link className="link menuLink" to="/">
-              Graphics & Design
+              Marketing 
             </Link>
             <Link className="link menuLink" to="/">
-              Video & Animation
+              Design 
             </Link>
             <Link className="link menuLink" to="/">
-              Writing & Translation
+              Technology
             </Link>
             <Link className="link menuLink" to="/">
-              AI Services
+              Clothing
             </Link>
             <Link className="link menuLink" to="/">
-              Digital Marketing
+              Music
             </Link>
-            <Link className="link menuLink" to="/">
-              Music & Audio
-            </Link>
-            <Link className="link menuLink" to="/">
-              Programming & Tech
-            </Link>
-            <Link className="link menuLink" to="/">
-              Business
-            </Link>
-            <Link className="link menuLink" to="/">
-              Lifestyle
-            </Link>
+            
           </div>
-          <hr />
+          <hr /> */}
         </>
       )}
     </div>
