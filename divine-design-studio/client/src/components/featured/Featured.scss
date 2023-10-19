@@ -4,19 +4,21 @@
   justify-content: center;
   background-color: #121313;
   color: white;
+  position: relative;
+  background-image: cover;
 
   .container {
     width: 100%;
+    overflow: hidden;
     display: flex;
     align-items: center;
     margin: 0;
     padding: 0;
     padding-left: 7rem;
-    background-image: url("/img/WEBBACKDROP.jpg");
+    background-image: url("/img/SLIDE 4.jpg");
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
-
     .left {
       display: flex;
       flex-direction: column;
@@ -29,8 +31,8 @@
           font-style: italic;
           font-weight: 300;
         }
+       
       }
-
       .search {
         background-color: white;
         border-radius: 5px;
@@ -98,13 +100,11 @@
       }
     }
 
-    .right {
-      height: 100%;
-
-      img {
-        height: 100%;
-        object-fit: contain;
-      }
-    }
+    // .right {
+    //   height: 100%;
+    //   margin: 0;
+    //   width: 100%;
+    //   margin: 0;
+    // }
   }
 }
