@@ -26,7 +26,6 @@ function Featured() {
   return (
     <div className="featured">
       <div className="container">
-        
         {/* <img
             src={image === 1 ? Backimg1 : image === 2 ? Backimg2 : image === 3 ? Backimg3 : Backimg4}
             alt={`Image ${image}`}
@@ -47,7 +46,21 @@ function Featured() {
             style={{ width: "100%", height: "auto" }}
           />
         </div> */}
-        
+         {/* <div className="right">
+          <img
+            src={
+              image === 1
+                ? Backimg1
+                : image === 2
+                ? Backimg2
+                : image === 3
+                ? Backimg3
+                : Backimg4
+            }
+            alt={`Image ${image}`}
+            style={{width: "55%"}}
+          />
+        </div> */}
         <div className="left">
           <h1>
             Collaborate with <span> freelancers </span>
@@ -74,6 +87,7 @@ function Featured() {
             <button>Marketing</button>
           </div>
         </div>
+
        
       </div>
     </div>
