@@ -30,7 +30,6 @@ function Featured() {
             src={image === 1 ? Backimg1 : image === 2 ? Backimg2 : image === 3 ? Backimg3 : Backimg4}
             alt={`Image ${image}`}
           /> */}
-        {/* <img src= {Backimg} alt="" /> */}
         {/* <div className="background-images">
           <img
             src={
