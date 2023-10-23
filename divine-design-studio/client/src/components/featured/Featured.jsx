@@ -10,56 +10,13 @@ import Backimg4 from "/img/SLIDE 4.jpg";
 function Featured() {
   const [input, setInput] = useState("");
   const navigate = useNavigate();
-  const [image, setImage] = useState(1);
 
   const handleSubmit = () => {
     navigate(`/gigs?search=${input}`);
   };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setImage((prevImage) => (prevImage >= 4 ? 1 : prevImage + 1));
-    }, 10000); // Change image every 3 seconds
-
-    return () => clearInterval(interval);
-  }, []);
   return (
     <div className="featured">
       <div className="container">
-        {/* <img
-            src={image === 1 ? Backimg1 : image === 2 ? Backimg2 : image === 3 ? Backimg3 : Backimg4}
-            alt={`Image ${image}`}
-          /> */}
-        {/* <div className="background-images">
-          <img
-            src={
-              image === 1
-                ? Backimg1
-                : image === 2
-                ? Backimg2
-                : image === 3
-                ? Backimg3
-                : Backimg4
-            }
-            alt={`Image ${image}`}
-            style={{ width: "100%", height: "auto" }}
-          />
-        </div> */}
-         {/* <div className="right">
-          <img
-            src={
-              image === 1
-                ? Backimg1
-                : image === 2
-                ? Backimg2
-                : image === 3
-                ? Backimg3
-                : Backimg4
-            }
-            alt={`Image ${image}`}
-            style={{width: "55%"}}
-          />
-        </div> */}
         <div className="left">
           <h1>
             Collaborate with <span> freelancers </span>
