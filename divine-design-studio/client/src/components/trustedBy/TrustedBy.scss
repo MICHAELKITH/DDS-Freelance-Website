@@ -3,14 +3,16 @@
   height: 100px;
   display: flex;
   justify-content: center;
+  background-color: rgb(230, 228, 224);
 
   .container {
     max-width: 760px;
     display: flex;
     align-items: center;
     gap: 20px;
-    color: rgb(200, 200, 200);
+    color: goldenrod;
     font-weight: 500;
+
 
     img{
       height: 50px;
