@@ -52,14 +52,14 @@ function Register() {
           <input
             name="username"
             type="text"
-            placeholder="johndoe"
+            placeholder="Your Name"
             onChange={handleChange}
           />
           <label htmlFor="">Email</label>
           <input
             name="email"
             type="email"
-            placeholder="email"
+            placeholder="Email"
             onChange={handleChange}
           />
           <label htmlFor="">Password</label>

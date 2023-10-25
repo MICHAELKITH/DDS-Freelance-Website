@@ -31,7 +31,12 @@
       textarea {
         padding: 20px;
         border: 1px solid rgb(216, 214, 214);
-      }
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+}
 
       button {
         border: none;
@@ -39,8 +44,17 @@
         color: white;
         font-weight: 500;
         font-size: 18px;
-        background-color: #1dbf73;
+        background-color: #ded812;
         cursor: pointer;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+}
+
+      button:hover{
+        background-color: black;
       }
 
       .toggle {

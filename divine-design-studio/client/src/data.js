@@ -3,19 +3,19 @@ export const cards = [
     id: 1,
     title: "AI Artists",
     desc: "Add talent to AI",
-    img: "https://images.pexels.com/photos/7532110/pexels-photo-7532110.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: "https://img.freepik.com/free-photo/corporate-management-strategy-solution-branding-concept_53876-167088.jpg?w=1380&t=st=1698246698~exp=1698247298~hmac=cd431e2f5f57d7d7c3af111442fc80afb90dc7c30478f712dd6798b1be779dfe",
   },
   {
     id: 2,
     title: "Logo Design",
     desc: "Build yor brand",
-    img: "https://images.pexels.com/photos/11295165/pexels-photo-11295165.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: "https://img.freepik.com/free-photo/medium-shot-man-wearing-vr-glasses_23-2149126949.jpg?w=1380&t=st=1698246875~exp=1698247475~hmac=18e8921d130d3dbad934b65e13c70e908382b9f9be03237b153a069261251bda",
   },
   {
     id: 3,
     title: "WordPress",
     desc: "Customize your site",
-    img: "https://images.pexels.com/photos/4371669/pexels-photo-4371669.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: "https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?auto=format&fit=crop&q=80&w=1935&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 4,

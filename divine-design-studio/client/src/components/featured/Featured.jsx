@@ -23,17 +23,17 @@ function Featured() {
             <br />
             Embrace <span> spiritual entrepreneurship</span>
           </h1>
-          {/* <div className="search">
+          <div className="search">
             <div className="searchInput">
               <img src="./img/search.png" alt="" />
               <input
                 type="text"
-                placeholder='Try "building mobile app"'
+                placeholder='DDS" freelancing '
                 onChange={(e) => setInput(e.target.value)}
               />
             </div>
             <button onClick={handleSubmit}>Search</button>
-          </div> */}
+          </div>
           <div className="popular">
             <span>Popular:</span>
             <button>Technology</button>
