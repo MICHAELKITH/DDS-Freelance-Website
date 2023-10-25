@@ -11,7 +11,7 @@
   transition: 0.5s all ease;
 
   &.active {
-    background-color: rgb(230, 230, 203);
+    background-color:#e8eded;
     color: rgb(0, 0, 0);
 
     button {
@@ -33,9 +33,38 @@
       font-size: 34px;
       font-weight: bold;
 
-      .Logo{
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          -webkit-transform: scale(1);
+          -moz-transform: scale(1);
+          -ms-transform: scale(1);
+          -o-transform: scale(1);
+        }
+
+        50% {
+          transform: scale(1.1);
+          -webkit-transform: scale(1.1);
+          -moz-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          -o-transform: scale(1.1);
+        }
+
+        100% {
+          transform: scale(1);
+          -webkit-transform: scale(1);
+          -moz-transform: scale(1);
+          -ms-transform: scale(1);
+          -o-transform: scale(1);
+        }
+      }
+
+      .Logo {
         width: 9rem;
         height: 12rem;
+        margin-top: 12px;
+        animation: pulse 5s ease-in-out infinite;
+        -webkit-animation: pulse 5s ease-in-out infinite;
       }
 
       .dot {
@@ -43,18 +72,19 @@
         color: #7cbf1d;
       }
     }
+
     .links {
       display: flex;
       align-items: center;
       gap: 24px;
       font-family: "Montserrat", sans-serif;
       font-weight: 500;
+      cursor: pointer;
+      color: #cc9110;
+
 
       span {
         white-space: nowrap;
-      }
-      .links:hover{
-        color: gold;
       }
 
       .user {
@@ -71,7 +101,7 @@
           object-fit: cover;
         }
 
-        
+
 
         .options {
           position: absolute;
@@ -134,12 +164,12 @@
       width: 100%;
       padding: 20px;
     }
-    .logo{
-      display: none;
+
+    .Logo{
+      width: 4rem;
+      height: 2rem;
     }
-    .links{
-      display: none;
-    }
+   
 
     .menu {
       width: 100%;

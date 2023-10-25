@@ -39,7 +39,7 @@ function Featured() {
             <button>Technology</button>
             <button>Music</button>
             <button>Clothing</button>
-            <button>Graphic Design</button>
+            <button>Design</button>
             <button>Marketing</button>
           </div>
         </div>
