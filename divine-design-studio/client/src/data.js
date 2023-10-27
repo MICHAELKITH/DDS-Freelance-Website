@@ -15,7 +15,7 @@ export const cards = [
     id: 3,
     title: "Music",
     desc: "Customize your site",
-    img: "https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?auto=format&fit=crop&q=80&w=1935&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "https://img.freepik.com/free-photo/volumetric-musical-background-with-treble-clef-notes-generative-ai_169016-29576.jpg?w=1380&t=st=1698357116~exp=1698357716~hmac=a3e72057948164fb82b75bf1546cd9ecaa7a7e603b5708c4d0fc8d65cae45763",
   },
   {
     id: 4,
