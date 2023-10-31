@@ -9,7 +9,7 @@ export const cards = [
     id: 2,
     title: "Design",
     desc: "Build yor brand",
-    img: "https://img.freepik.com/free-photo/medium-shot-man-wearing-vr-glasses_23-2149126949.jpg?w=1380&t=st=1698246875~exp=1698247475~hmac=18e8921d130d3dbad934b65e13c70e908382b9f9be03237b153a069261251bda",
+    img: "https://img.freepik.com/free-photo/abstract-glowing-flame-drops-electric-illumination-generative-ai_188544-8092.jpg?w=740&t=st=1698742464~exp=1698743064~hmac=85abd460701416b1e8c1ee57110c7c039464ed83e82809175264cbf201934f37",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ export const cards = [
     id: 5,
     title: "Clothing",
     desc: "Engage your audience",
-    img: "https://img.freepik.com/free-photo/black-student-discussing-marketing-strategy-with-remote-university-teacher_482257-20326.jpg?w=1380&t=st=1698318893~exp=1698319493~hmac=d5fbebda6aac664d65d3607ecc8147f57b650b237dab0419f4d812e4b7c67b4f",
+    img: "https://img.freepik.com/free-photo/young-handsome-man-choosing-clothes-shop_1303-19720.jpg?w=1380&t=st=1698742519~exp=1698743119~hmac=5e92968ce251eabcf24ea7104cb31b257e1e7cb5320cccf12c86db2fc09fbc02",
   }
 ];
 

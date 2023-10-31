@@ -20,34 +20,31 @@ function Home() {
       <div className="features">
         <div className="container">
           <div className="item">
-            <h1>A whole world of freelance talent at your fingertips</h1>
+            <h1>We believe we offer a diverse and unique comprehensive package for freelancers to thrive in a global digital economy</h1>
             <div className="title">
               <img src="./img/check.png" alt="" />
-              The best for every budget
+              Bi-weekly payments
             </div>
             <p>
-              Find high-quality services at every price point. No hourly rates,
-              just project-based pricing.
+            Monthly paid co-working space, designated by leadership
             </p>
             <div className="title">
               <img src="./img/check.png" alt="" />
-              Quality work done quickly
+              Financial assistance for relocation and transportation costs
             </div>
             <p>
-              Find the right freelancer to begin working on your project within
-              minutes.
+            Financial support for technical software/licenses and personal equipment
             </p>
             <div className="title">
               <img src="./img/check.png" alt="" />
-              Protected payments, every time
+              Free access to spiritual counseling and training
             </div>
             <p>
-              Always know what you'll pay upfront. Your payment isn't released
-              until you approve the work.
+            Complimentary attendance at designated paid trip conferences, including airfare, hotel, and food
             </p>
             <div className="title">
               <img src="./img/check.png" alt="" />
-              24/7 support
+              Free uniforms and accompanied photography/videography
             </div>
             <p>
               Find high-quality services at every price point. No hourly rates,
@@ -55,7 +52,7 @@ function Home() {
             </p>
           </div>
           <div className="item">
-            <video src="./img/video.mp4" controls />
+            <video src="./img/videodds.mp4" controls />
           </div>
         </div>
       </div>
