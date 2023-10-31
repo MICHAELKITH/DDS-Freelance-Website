@@ -20,36 +20,46 @@ function Home() {
       <div className="features">
         <div className="container">
           <div className="item">
-            <h1>We believe we offer a diverse and unique comprehensive package for freelancers to thrive in a global digital economy</h1>
+            <h1>Our benefits package promotes a strong work/life balance with these offerings:</h1>
             <div className="title">
               <img src="./img/check.png" alt="" />
-              Bi-weekly payments
+              Bi-weekly payments.
             </div>
             <p>
-            Monthly paid co-working space, designated by leadership
+            Monthly paid co-working space, designated by leadership.
             </p>
             <div className="title">
               <img src="./img/check.png" alt="" />
-              Financial assistance for relocation and transportation costs
+              Financial assistance for relocation and transportation costs.
             </div>
             <p>
-            Financial support for technical software/licenses and personal equipment
+            Financial support for technical software/licenses and personal equipment.
             </p>
             <div className="title">
               <img src="./img/check.png" alt="" />
-              Free access to spiritual counseling and training
+              Free access to spiritual counseling and training.
             </div>
             <p>
-            Complimentary attendance at designated paid trip conferences, including airfare, hotel, and food
+            Complimentary attendance at designated paid trip conferences, including airfare, hotel, and food.
             </p>
             <div className="title">
               <img src="./img/check.png" alt="" />
-              Free uniforms and accompanied photography/videography
+              Free uniforms and accompanied photography/videography.
             </div>
             <p>
-              Find high-quality services at every price point. No hourly rates,
-              just project-based pricing.
+            Free marketing and advertisement of your company and services.
             </p>
+            <div className="title">
+              <img src="./img/check.png" alt="" />
+              Opportunities to collaborate with other talented professionals
+            </div>
+            <p>
+            A 3-6 month evaluation period for potential bonuses.
+            </p>
+            <div className="title">
+              <img src="./img/check.png" alt="" />
+              One paid vacation to an approved destination, as determined by leadership.
+            </div>
           </div>
           <div className="item">
             <video src="./img/videodds.mp4" controls />
@@ -58,7 +68,7 @@ function Home() {
       </div>
       <div className="explore">
         <div className="container">
-          <h1>Explore the marketplace</h1>
+          <h1>Explore the DDS marketplace</h1>
           <div className="items">
             <div className="item">
               <img
