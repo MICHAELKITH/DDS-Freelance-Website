@@ -11,13 +11,19 @@
   transition: 0.5s all ease;
 
   &.active {
-    background-color:#050505;
+    background-color: #050505;
     color: rgb(0, 0, 0);
 
     button {
       background-color: rgb(255, 255, 255) !important;
       color: #bfb11d !important;
-      border: 1px solid #1dbf73 !important;
+      border: 1px solid #dfe9e4 !important;
+
+      &:hover {
+        background-color: gold;
+        border-color: #080808;
+        color: #080808;
+      }
     }
   }
 
@@ -80,11 +86,16 @@
       font-family: "Montserrat", sans-serif;
       font-weight: 500;
       cursor: pointer;
-      color: #cc9110;
+      color: #c9bb16;
+      
+      
+      a {
+        color: #c9bb16; /* Default text color for links */
 
-
-      span {
-        white-space: nowrap;
+        &:hover {
+          color: #c9bb16; /* Change the text color on hover */
+          text-decoration: underline; /* Add an underline on hover */
+        }
       }
 
       .user {
@@ -100,8 +111,6 @@
           border-radius: 50%;
           object-fit: cover;
         }
-
-
 
         .options {
           position: absolute;
@@ -130,9 +139,9 @@
         cursor: pointer;
 
         &:hover {
-          background-color: gold;
-          border-color: #080808;
-          color: #080808;
+          background-color: gold; /* Change the background color on hover */
+          border-color: #080808; /* Change the border color on hover */
+          color: #080808; /* Change the text color on hover */
         }
       }
     }
@@ -165,11 +174,10 @@
       padding: 20px;
     }
 
-    .Logo{
+    .Logo {
       width: 4rem;
       height: 2rem;
     }
-   
 
     .menu {
       width: 100%;
