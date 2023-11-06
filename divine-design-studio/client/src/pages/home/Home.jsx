@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Home.scss";
 import Featured from "../../components/featured/Featured";
 import TrustedBy from "../../components/trustedBy/TrustedBy";
@@ -8,6 +8,21 @@ import ProjectCard from "../../components/projectCard/ProjectCard";
 import { cards, projects } from "../../data";
 
 function Home() {
+  const [textIndex, setTextIndex] = useState(0);
+  const textArray = [
+    "Acts 18:3 ~ And because he was a tentmaker as they were, he stayed and worked with them.",
+    "Romans 16:3- 3 Greet Prisca and Aquila, my fellow workers in Christ Jesus"
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTextIndex((prevIndex) => (prevIndex + 1) % textArray.length);
+    }, 5000); 
+
+    return () => {
+      clearInterval(interval); 
+    };
+  }, [textArray]);
   return (
     <div className="home">
       <Featured />
@@ -181,40 +196,96 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="features dark">
+      <div className="features dark" style={{ background: "black" }}>
         <div className="container">
           <div className="item">
             <h1>
-              Divine design studio <i>business</i>
+              Divine Design Studio{" "}
+              <i>
+                {" "}
+                <span style={{ color: "#f5f4ee" }}>promotes</span>
+              </i>
             </h1>
             <h1>
-              A business solution designed for <i>teams</i>
+              A tent-maker solution designed for{" "}
+              <i>
+                {" "}
+                <span style={{ color: "#f5f4ee" }}>
+                  spiritual entrepreneurs
+                </span>{" "}
+              </i>
             </h1>
             <p>
-              Upgrade to a curated experience packed with tools and benefits,
-              dedicated to businesses
+              Did you know that Apostle Paul was a spiritual entrepreneur as
+              well? He found ways to support himself outside the traditional
+              church structure.
             </p>
+            <div className="title"></div>
+            <h1
+              style={{ fontWeight: "bold", fontSize: "24px", color: "#c9bb16" }}
+            >
+              Acts 18:1-4
+            </h1>
+
             <div className="title">
-              <img src="./img/check.png" alt="" />
-              Connect to freelancers with proven business experience
+              <p>
+                1. After this, Paul left Athens and went to Corinth. <br /> 2.
+                There he met a Jew named Aquila, a native of Pontus, who had
+                recently come from Italy with his wife Priscilla, because
+                Claudius had ordered all Jews to leave Rome. Paul went to see
+                them, <br /> 3. and because he was a
+                <span
+                  style={{
+                    textDecoration: "underline",
+                    color: "#c9bb16",
+                    paddingLeft: "10px",
+                    fontSize: "24px",
+                    fontFamily: "Arial, sans-serif",
+                  }}
+                >
+                  tent-maker
+                </span>{" "}
+                <span
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "24px",
+                    color: "#c9bb16",
+                  }}
+                >
+                  as they were, he stayed and worked with them.
+                </span>{" "}
+                <br />
+                4. Every Sabbath he reasoned in the synagogue, trying to
+                persuade Jews and Greeks.
+              </p>
             </div>
 
             <div className="title">
-              <img src="./img/check.png" alt="" />
-              Get matched with the perfect talent by a customer success manager
-            </div>
-
-            <div className="title">
-              <img src="./img/check.png" alt="" />
-              Manage teamwork and boost productivity with one powerful workspace
+              {/* <img src="./img/check.png" alt="" />
+              Manage teamwork and boost productivity with one powerful workspace */}
             </div>
             <button>Explore DDS Business</button>
           </div>
-          <div className="item">
+          <div className="item" style={{ position: "relative" }}>
             <img
-              src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_870,dpr_2.0/v1/attachments/generic_asset/asset/d9c17ceebda44764b591a8074a898e63-1599597624768/business-desktop-870-x2.png"
+              src="https://images.unsplash.com/photo-1536704231234-beca9772ca68?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt=""
             />
+            <div
+              style={{
+                position: "absolute",
+                top: "30%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                padding: "10px",
+                fontSize: "18px",
+                fontWeight: "bold",
+                color: "#000",
+                backgroundColor: "transparent",
+              }}
+            >
+              {textArray[textIndex]}
+            </div>
           </div>
         </div>
       </div>

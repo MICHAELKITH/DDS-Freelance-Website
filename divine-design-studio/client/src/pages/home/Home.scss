@@ -29,9 +29,9 @@
       }
 
       button {
-        background-color: #79bf1d;
+        background-color: #FFD700;
         border: none;
-        color: white;
+        color: rgb(8, 8, 8);
         padding: 10px 20px;
         border-radius: 5px;
         width: max-content;
@@ -59,7 +59,12 @@
 
         img{
           width: 100%;
-        }
+          border-radius: 5px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -ms-border-radius: 5px;
+          -o-border-radius: 5px;
+}
         h1 {
           font-weight: 500;
           margin-bottom: 10px;
@@ -69,9 +74,9 @@
           display: flex;
           align-items: center;
           gap: 10px;
-          font-weight: 500;
-          font-size: 18px;
-          color: #FFD700!important;
+          font-weight: 700;
+          font-size: 24px;
+          color: #FFD700;
           img {
             width: 24px;
             height: 24px;
@@ -80,7 +85,7 @@
         p {
           font-size: 18px;
           font-weight: 300;
-          color: white;
+          color: #FFD700;
           line-height: 28px;
           letter-spacing: 1px;
         }
@@ -157,5 +162,8 @@
         }
       }
     }
+  }
+  .feature_dark{
+
   }
 }
