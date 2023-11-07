@@ -1,33 +1,35 @@
+// import DDS from "./img/DDS.png"
+
 export const cards = [
   {
     id: 1,
     title: "Technology",
     desc: "Add talent to AI",
-    img: "https://img.freepik.com/free-photo/corporate-management-strategy-solution-branding-concept_53876-167088.jpg?w=1380&t=st=1698246698~exp=1698247298~hmac=cd431e2f5f57d7d7c3af111442fc80afb90dc7c30478f712dd6798b1be779dfe",
+    img: "./img/Technology.jpeg",
   },
   {
     id: 2,
     title: "Design",
     desc: "Build yor brand",
-    img: "https://img.freepik.com/free-photo/abstract-glowing-flame-drops-electric-illumination-generative-ai_188544-8092.jpg?w=740&t=st=1698742464~exp=1698743064~hmac=85abd460701416b1e8c1ee57110c7c039464ed83e82809175264cbf201934f37",
+    img: "./img/design1.jpeg",
   },
   {
     id: 3,
     title: "Music",
     desc: "Customize your site",
-    img: "https://img.freepik.com/free-photo/volumetric-musical-background-with-treble-clef-notes-generative-ai_169016-29576.jpg?w=1380&t=st=1698357116~exp=1698357716~hmac=a3e72057948164fb82b75bf1546cd9ecaa7a7e603b5708c4d0fc8d65cae45763",
+    img: "./img/Music1.jpg",
   },
   {
     id: 4,
     title: "Marketing",
     desc: "Share your message",
-    img: "https://img.freepik.com/free-photo/black-woman-host-online-show-looking-laptop-talking-podcast-microphone-with-listeners-entertainment-speaking-during-livestreaming-blogger-discussing-vlog-wearing-headphones_482257-12696.jpg?w=1380&t=st=1698319079~exp=1698319679~hmac=73b5be47a695c37f2c53e007e9e8ba36b802de02099dedb65b18dcf2c5583d8c",
+    img: "./img/MARKETING1.jpg",
   },
   {
     id: 5,
     title: "Clothing",
     desc: "Engage your audience",
-    img: "https://img.freepik.com/free-photo/young-handsome-man-choosing-clothes-shop_1303-19720.jpg?w=1380&t=st=1698742519~exp=1698743119~hmac=5e92968ce251eabcf24ea7104cb31b257e1e7cb5320cccf12c86db2fc09fbc02",
+    img: "./img/clothing.jpeg",
   }
 ];
 
@@ -37,28 +39,28 @@ export const projects = [
     img: "https://images.pexels.com/photos/1462935/pexels-photo-1462935.jpeg?auto=compress&cs=tinysrgb&w=1600",
     pp: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1600",
     cat: "Web and Mobile Design",
-    username: "Anna Bell",
+    username: "Michael",
   },
   {
     id: 2,
     img: "https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600",
     pp: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1600",
     cat: "Logo Design",
-    username: "Morton Green",
+    username: "Phillip",
   },
   {
     id: 3,
     img: "https://images.pexels.com/photos/4144923/pexels-photo-4144923.jpeg?auto=compress&cs=tinysrgb&w=1600",
     pp: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=1600",
     cat: "Animated GIFs",
-    username: "Emmett Potter",
+    username: "David",
   },
   {
     id: 4,
     img: "https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=1600",
     pp: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1600",
     cat: "Packaging Design",
-    username: "Freddie Johnston",
+    username: "Gloria",
   },
   {
     id: 5,
