@@ -172,12 +172,20 @@
     .container {
       width: 100%;
       padding: 20px;
+      .logo {
+        
+        .Logo{
+        width: 120px;
+        height: 120px;
+        }
+      }
+
+      .links{
+        display: none;
+      }
     }
 
-    .Logo {
-      width: 4rem;
-      height: 2rem;
-    }
+    
 
     .menu {
       width: 100%;

@@ -1,3 +1,4 @@
+/* Default styles for all devices */
 .featured {
   height: 600px;
   display: flex;
@@ -6,131 +7,216 @@
   color: white;
   position: relative;
   background-image: cover;
+  width: 100%;
+}
 
-  .container {
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    padding-left: 7rem;
-    background-image: url("/img/SLIDE 4.jpg");
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    animation: changeBackground 10s infinite; 
-  
+.featured .container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  padding-left: 7rem;
+  background-image: url("/img/SLIDE 4.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: changeBackground 10s infinite;
 
-
-    @keyframes changeBackground {
-      0% {
-        background-image: url("/img/SLIDE 1.jpg");
-      }
-      25% {
-        background-image: url("/img/SLIDE 2.jpg");
-      }
-      50% {
-        background-image: url("/img/SLIDE 3.jpg");
-      }
-      75% {
-        background-image: url("/img/SLIDE 4.jpg");
-      }
-      100% {
-        background-image: url("/img/SLIDE 1.jpg");
-      }
-    }
-    .left {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      
-
-      h1 {
-        font-size: 50px;
-        
-
-        span {
-          font-style: italic;
-          font-weight: 300;
-          
-        }
-       
-      }
-      .search {
-        background-color: white;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        overflow: hidden;
-
-        .searchInput {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-
-          img {
-            width: 20px;
-            height: 20px;
-            margin: 10px;
-          }
-
-          input {
-            border: none;
-            outline: none;
-
-            &::placeholder {
-              color: gray;
-            }
-          }
-        }
-
-        button {
-          width: 120px;
-          height: 50px;
-          border: none;
-          background-color: gold;
-          color: black;
-          align-self: flex-end;
-          cursor: pointer;
-          font-weight: 400;
-        }
-      }
-
-      .popular {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        
-
-        span {
-          width: max-content;
-        }
-
-        button {
-          width: max-content;
-          color: white;
-          border: 1px solid white;
-          padding: 5px 10px;
-          border-radius: 20px;
-          background-color: transparent;
-          font-size: 14px;
-          text-transform: uppercase;
-        }
-
-        button:hover {
-          background-color: goldenrod;
-          color: black;
-        }
-      }
+  @keyframes changeBackground {
+    0% {
+      background-image: url("/img/SLIDE 1.jpg");
     }
 
-    // .right {
-    //   height: 100%;
-    //   margin: 0;
-    //   width: 100%;
-    //   margin: 0;
-    // }
+    25% {
+      background-image: url("/img/SLIDE 2.jpg");
+    }
+
+    50% {
+      background-image: url("/img/SLIDE 3.jpg");
+    }
+
+    75% {
+      background-image: url("/img/SLIDE 4.jpg");
+    }
+
+    100% {
+      background-image: url("/img/SLIDE 1.jpg");
+    }
   }
+}
+
+.featured .container .left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.featured .container .left h1 {
+  font-size: 50px;
+}
+
+.featured .container .left h1 span {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.featured .container .left .search {
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.featured .container .left .search .searchInput {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.featured .container .left .search .searchInput img {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+}
+
+.featured .container .left .search .searchInput input {
+  border: none;
+  outline: none;
+}
+
+.featured .container .left .search .searchInput input::placeholder {
+  color: gray;
+}
+
+.featured .container .left .search button {
+  width: 120px;
+  height: 50px;
+  border: none;
+  background-color: gold;
+  color: black;
+  align-self: flex-end;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.featured .container .left .popular {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.featured .container .left .popular span {
+  width: max-content;
+}
+
+.featured .container .left .popular button {
+  width: max-content;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background-color: transparent;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.featured .container .left .popular button:hover {
+  background-color: goldenrod;
+  color: black;
+}
+
+/* Media Queries */
+
+/* Mobile Phones (Portrait) */
+@media screen and (max-width: 480px) {
+  .featured {
+    width: 100%;
+
+    .container 
+    {
+      .left{
+        h1 {
+          font-size: 15px;
+          display: inline;
+          float: left;
+          color: gold;
+      
+        }
+        .search  {
+          width: 20px;
+          height: 20px;
+          margin: 10px;
+          display: none;
+          
+      }
+      .popular {
+        display: none;
+        align-items: center;
+        gap: 1px;
+        
+    }
+      } 
+    
+    }
+
+    
+  }
+}
+
+/* Mobile Phones (Landscape) */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .featured {
+    width: 100%;
+
+    .container .left h1 {
+      font-size: 20px;
+      color: red;
+      display: block;
+      float: left;
+      padding-right: 80rem
+      
+    }
+
+    
+  }
+}
+
+/* Tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Your tablet styles here */
+}
+
+/* Small Desktops and Laptops */
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+  /* Your small desktop and laptop styles here */
+}
+
+/* Large Desktops */
+@media screen and (min-width: 1367px) {
+  /* Your large desktop styles here */
+}
+
+/* High-DPI (Retina) Displays */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+  /* Your high-DPI display styles here */
+}
+
+/* Print Styles */
+@media print {
+  /* Your print styles here */
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  /* Your dark mode styles here */
+}
+
+/* Specific Screen Width Range (e.g., between 600px and 900px) */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  /* Your styles for screens within the specified width range */
 }
