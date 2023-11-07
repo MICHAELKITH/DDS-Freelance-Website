@@ -10,17 +10,22 @@ import { cards, projects } from "../../data";
 function Home() {
   const [textIndex, setTextIndex] = useState(0);
   const textArray = [
-    "Acts 18:3 ~ And because he was a tentmaker as they were, he stayed and worked with them.",
-    "Romans 16:3- 3 Greet Prisca and Aquila, my fellow workers in Christ Jesus"
+    <p key="verse1" style={{ color: "blue", fontWeight: "bold" }}>
+      Acts 18:3 ~ And because he was a{" "}
+      <span style={{ textDecoration: "underline" }}>tentmaker</span> as they were, he stayed and worked with them.
+    </p>,
+    <p key="verse2" style={{ color: "green", fontStyle: "italic" }}>
+      Romans 16:3- 3 Greet Prisca and Aquila, my fellow workers in Christ Jesus
+    </p>
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setTextIndex((prevIndex) => (prevIndex + 1) % textArray.length);
-    }, 5000); 
+    }, 5000);
 
     return () => {
-      clearInterval(interval); 
+      clearInterval(interval);
     };
   }, [textArray]);
   return (
