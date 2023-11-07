@@ -17,7 +17,7 @@ export const cards = [
     id: 3,
     title: "Music",
     desc: "Customize your site",
-    img: "./img/Music1.jpg",
+    img: "./img/DMUSIC.jpg",
   },
   {
     id: 4,
