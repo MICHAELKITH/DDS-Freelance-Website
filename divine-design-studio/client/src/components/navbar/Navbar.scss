@@ -1,4 +1,10 @@
 /* Default styles for larger screens */
+*{
+margin: 0;
+padding: 0;
+
+}
+
 .navbar {
   display: flex;
   flex-direction: column;
@@ -9,6 +15,9 @@
   top: 0;
   z-index: 999;
   transition: 0.5s all ease;
+  width: 100%;
+  display: none;
+  
 
   &.active {
     background-color: #050505;
@@ -28,7 +37,7 @@
   }
 
   .container {
-    width: 100rem;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -169,8 +178,8 @@
 /* Media query for small screens */
 @media screen and (max-width: 767px) {
   .navbar {
+    width: 100%;
     .container {
-      width: 100%;
       padding: 20px;
       .logo {
         

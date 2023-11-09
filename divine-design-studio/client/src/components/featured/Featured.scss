@@ -3,7 +3,7 @@
   height: 600px;
   display: flex;
   justify-content: center;
-  background-color: #121313;
+  background-color: #1fcccc;
   color: white;
   position: relative;
   background-image: cover;
@@ -185,38 +185,12 @@
   }
 }
 
-/* Tablets */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  /* Your tablet styles here */
+@media screen and (max-width: 768px) {
+  .featured {
+    width: 100%;
 }
-
-/* Small Desktops and Laptops */
-@media screen and (min-width: 1025px) and (max-width: 1366px) {
-  /* Your small desktop and laptop styles here */
+.featured .container .left h1 {
+  font-size: 1rem;
+  
 }
-
-/* Large Desktops */
-@media screen and (min-width: 1367px) {
-  /* Your large desktop styles here */
-}
-
-/* High-DPI (Retina) Displays */
-@media (-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
-  /* Your high-DPI display styles here */
-}
-
-/* Print Styles */
-@media print {
-  /* Your print styles here */
-}
-
-/* Dark Mode */
-@media (prefers-color-scheme: dark) {
-  /* Your dark mode styles here */
-}
-
-/* Specific Screen Width Range (e.g., between 600px and 900px) */
-@media screen and (min-width: 600px) and (max-width: 900px) {
-  /* Your styles for screens within the specified width range */
 }

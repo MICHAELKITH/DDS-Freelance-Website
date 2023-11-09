@@ -1,4 +1,10 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 .home {
+  width: 100%;
+  // display: none;
   .features {
     background-color: #f1fdf7;
     display: flex;
@@ -11,6 +17,7 @@
 
       h1 {
         color: white !important;
+       
       }
 
       i {
@@ -169,7 +176,6 @@
   .features {
     .container {
       font-size: 1rem;
-      padding-left: 10rem;
       display: flex;
       align-items: center;
       .item video {

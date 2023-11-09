@@ -5,7 +5,8 @@
   margin: 50px 0px;
   background-color: black;
   padding-top: 2rem;
-
+  width: 100%;
+ 
   img {
     width: 24px;
     height: 24px;
@@ -72,3 +73,34 @@
     }
   }
 }
+@media screen and (max-width: 768px){
+  .footer {
+    width: 100%;
+    color: red;
+
+  }
+  .footer .container {
+    color: red;
+
+  }
+  .footer .container .top {
+    font-size: 1rem;
+  }
+  .footer .container .top .item {
+    padding-left: 12rem;
+    font-size: 1rem;
+    gap: .5rem;
+    display: none;
+  }
+  .footer .container .bottom .right .link {
+    display: none;
+  }
+  .footer .container .bottom .left {
+    display: none;
+  }
+  .footer .container .bottom .right .social {
+    padding-left: 50px;
+    cursor: pointer;
+  }
+}
+

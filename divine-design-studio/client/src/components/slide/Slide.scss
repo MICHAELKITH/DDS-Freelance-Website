@@ -35,3 +35,16 @@
     left: -25px;
   }
 }
+@media screen and (max-width: 768px){
+  .slide .topics {
+    font-size: 2rem;
+    justify-content: center;
+    padding-left: 2rem;
+  }
+  .slide .container{
+    width: 100%;
+  }
+  .slide .carousel-initialized{
+
+  }
+}
