@@ -3,11 +3,15 @@
   justify-content: center;
   padding: 100px 0px;
   background-color: black;
+  width: 100%;
+  flex-direction: row;
+  display: none;
   
   .container {
     width: 1400px;
     position: relative;
     padding-top: -10px;
+    padding-right: 2rem;
   }
   .topics{
     padding-bottom: 2rem;
@@ -17,6 +21,7 @@
 
   .carousel-initialized {
     position: static;
+   
   }
 
   .carousel-prev,
@@ -29,6 +34,7 @@
     top: 0;
     bottom: 0;
     margin: auto;
+   
   }
 
   .carousel-prev {
@@ -36,15 +42,21 @@
   }
 }
 @media screen and (max-width: 768px){
+  .slide{
+    flex-direction: column;
+  }
   .slide .topics {
     font-size: 2rem;
     justify-content: center;
     padding-left: 2rem;
+    color: gold;
+
   }
   .slide .container{
     width: 100%;
   }
   .slide .carousel-initialized{
-
+    display: flex;
+    flex-direction: column;
   }
 }

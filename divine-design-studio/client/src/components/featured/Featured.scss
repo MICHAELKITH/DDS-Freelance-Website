@@ -3,7 +3,7 @@
   height: 600px;
   display: flex;
   justify-content: center;
-  background-color: #1fcccc;
+  background-color: #101010;
   color: white;
   position: relative;
   background-image: cover;
@@ -132,65 +132,80 @@
 /* Media Queries */
 
 /* Mobile Phones (Portrait) */
-@media screen and (max-width: 480px) {
-  .featured {
-    width: 100%;
-
-    .container 
-    {
-      .left{
-        h1 {
-          font-size: 15px;
-          display: inline;
-          float: left;
-          color: gold;
-      
-        }
-        .search  {
-          width: 20px;
-          height: 20px;
-          margin: 10px;
-          display: none;
-          
-      }
-      .popular {
-        display: none;
-        align-items: center;
-        gap: 1px;
-        
-    }
-      } 
-    
-    }
-
-    
-  }
-}
-
-/* Mobile Phones (Landscape) */
-@media screen and (max-width: 768px) and (orientation: landscape) {
-  .featured {
-    width: 100%;
-
-    .container .left h1 {
-      font-size: 20px;
-      color: red;
-      display: block;
-      float: left;
-      padding-right: 80rem
-      
-    }
-
-    
-  }
-}
 
 @media screen and (max-width: 768px) {
   .featured {
     width: 100%;
-}
-.featured .container .left h1 {
-  font-size: 1rem;
-  
-}
+  }
+
+  .featured .container {
+    padding-left: 25px;
+    max-width: 100%;
+    background-size: 100% 50%;
+  }
+
+  .featured .container .left h1 {
+    font-size: 1rem;
+
+
+  }
+
+  .featured .container .left .search {
+    width: 90%;
+  }
+
+  .featured .container .left .popular {
+
+    color: gold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .featured .container .left .popular button:nth-child(2) {
+    display: inline-block;
+    text-transform: lowercase;
+    width: fit-content;
+
+  }
+
+  .featured .container .left .popular button:nth-child(3) {
+    display: inline-block;
+    text-transform: lowercase;
+    width: fit-content;
+  }
+
+  .featured .container .left .popular button:nth-child(4) {
+    display: inline-block;
+    text-transform: lowercase;
+    width: fit-content;
+  }
+
+  .featured .container .left .popular button:nth-child(5) {
+    display: inline-block;
+    text-transform: lowercase;
+    width: fit-content;
+  }
+
+  .featured .container .left .popular button:nth-child(6) {
+    display: inline-block;
+    text-transform: lowercase;
+    width: fit-content;
+  }
+
+  .featured .container .left .search .searchInput img {
+    width: 15px;
+    height: 15px;
+    margin: 10px
+  }
+
+  .featured .container .left .search .searchInput input {
+    font-size: 18px;
+  }
+  .featured .container .left {
+    margin-top: 12rem;
+  }
+
 }
