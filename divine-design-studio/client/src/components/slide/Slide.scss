@@ -5,15 +5,17 @@
   background-color: black;
   width: 100%;
   flex-direction: row;
-  display: none;
-  
+ 
+
+
   .container {
     width: 1400px;
     position: relative;
     padding-top: -10px;
     padding-right: 2rem;
   }
-  .topics{
+
+  .topics {
     padding-bottom: 2rem;
     color: white;
     font-size: 4rem;
@@ -21,7 +23,7 @@
 
   .carousel-initialized {
     position: static;
-   
+
   }
 
   .carousel-prev,
@@ -34,29 +36,22 @@
     top: 0;
     bottom: 0;
     margin: auto;
-   
+
   }
 
   .carousel-prev {
     left: -25px;
   }
 }
-@media screen and (max-width: 768px){
+
+@media screen and (max-width: 768px) {
   .slide{
-    flex-direction: column;
+    width: 100%;
   }
   .slide .topics {
     font-size: 2rem;
-    justify-content: center;
-    padding-left: 2rem;
-    color: gold;
+    padding-left: 38px;
+    padding-top: -20px;
 
-  }
-  .slide .container{
-    width: 100%;
-  }
-  .slide .carousel-initialized{
-    display: flex;
-    flex-direction: column;
   }
 }
