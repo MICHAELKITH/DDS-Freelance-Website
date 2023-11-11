@@ -1,8 +1,11 @@
-/* Default styles for larger screens */
-*{
-margin: 0;
-padding: 0;
 
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Titillium Web", sans-serif;
 }
 
 .navbar {
@@ -16,6 +19,7 @@ padding: 0;
   z-index: 999;
   transition: 0.5s all ease;
   width: 100%;
+  // display: none;
   &.active {
     background-color: #050505;
     color: rgb(0, 0, 0);
@@ -78,11 +82,6 @@ padding: 0;
         animation: pulse 5s ease-in-out infinite;
         -webkit-animation: pulse 5s ease-in-out infinite;
       }
-
-      .dot {
-        font-weight: bold;
-        color: #7cbf1d;
-      }
     }
 
     .links {
@@ -93,14 +92,22 @@ padding: 0;
       font-weight: 500;
       cursor: pointer;
       color: #c9bb16;
+      padding-right: 30px;
+      .nav-items > span{
+        justify-content: space-between;
+        gap: 20px;
+        padding-right: 20px;
+      }
       
       
       a {
-        color: #c9bb16; /* Default text color for links */
+        color: #c9bb16;
+        margin-left: 20px;
+        
 
         &:hover {
-          color: #c9bb16; /* Change the text color on hover */
-          text-decoration: underline; /* Add an underline on hover */
+          color: #faf2f2; 
+          text-decoration: underline; 
         }
       }
 
@@ -170,6 +177,16 @@ padding: 0;
     font-family: "Montserrat", sans-serif;
     padding-left: 45%;
   }
+  .nav-btn {
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    visibility: hidden;
+    opacity: 0;
+    font-size: .8rem;
+  }
 }
 
 /* Media query for small screens */
@@ -186,8 +203,12 @@ padding: 0;
         }
       }
 
-      .links{
+      .nav-items{
         display: none;
+      }
+      .nav-btn {
+        visibility: visible;
+        opacity: 1;
       }
     }
 
@@ -198,4 +219,33 @@ padding: 0;
       padding: 10px;
     }
   }
+  .nav-btn {
+		visibility: visible;
+		opacity: 1;
+    // padding-left: 10px;
+    // margin-left: 10rem;
+    
+	}
+  .nav-items{
+    position: fixed;
+		top: -100vh;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		background-color: var(--mainColor);
+		transition: 1s;
+  }
+  .responsive_nav {
+		transform: translateY(100vh);
+	}
+  .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
 }
