@@ -182,34 +182,36 @@
 }
 
 @media screen and (max-width: 768px) {
+  .features{
+    width: 100%;
 
-  .features {
-    .container {
-      font-size: 1rem;
-
+    .container{
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      padding-left: 400px;
+      
+      .item {
+        h1{
+          font-size: .6rem;
+          line-break: auto;
+          .title{
+            font-size: .6rem;
+            display: none;
 
-      .item video {
-        display: none;
+          
+          }
+        }
+
       }
-
-      .item h1 {
-        font-size: 18px;
-        color: white;
-
-      }
-
-      .item p {
-        display: none;
-      }
-
+    
+      
     }
   }
 
-  .home .features .container .item .title {
-    font-size: 18px;
-  }
+  // .home .features .container .item .title {
+  //   font-size: 18px;
+  // }
   .home .explore .container {
 
     h1 {
@@ -223,11 +225,7 @@
     }
   }
 
-  .home .features .container .item {
-    margin-left: 15rem;
-    padding-left: 20rem;
-    font-size: 1rem;
-  }
+  
 
   .home .features .container .item h1 {
     color: rgb(209, 67, 67);

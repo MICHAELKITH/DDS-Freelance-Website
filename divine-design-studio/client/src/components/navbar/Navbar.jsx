@@ -112,8 +112,8 @@ function Navbar() {
 
           <button className="nav-btn" onClick={showNavbar}>
           <svg
-      viewBox="0 0 16 16"
-      fill="black"
+      viewBox="0 0 1 16"
+      fill="red"
       height="1em"
       width="2em"
     >

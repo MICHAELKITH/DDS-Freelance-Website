@@ -1,4 +1,3 @@
-// import DDS from "./img/DDS.png"
 
 export const cards = [
   {

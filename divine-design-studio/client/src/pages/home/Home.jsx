@@ -12,11 +12,12 @@ function Home() {
   const textArray = [
     <p key="verse1" style={{ color: "blue", fontWeight: "bold" }}>
       Acts 18:3 ~ And because he was a{" "}
-      <span style={{ textDecoration: "underline" }}>tentmaker</span> as they were, he stayed and worked with them.
+      <span style={{ textDecoration: "underline" }}>tentmaker</span> as they
+      were, he stayed and worked with them.
     </p>,
     <p key="verse2" style={{ color: "green", fontStyle: "italic" }}>
       Romans 16:3- 3 Greet Prisca and Aquila, my fellow workers in Christ Jesus
-    </p>
+    </p>,
   ];
 
   useEffect(() => {
@@ -201,7 +202,10 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="features dark" style={{ background: "black" }}>
+      <div
+        className="features dark"
+        style={{ background: "black", width: "100%" }}
+      >
         <div className="container">
           <div className="item">
             <h1>
@@ -263,11 +267,6 @@ function Home() {
                 4. Every Sabbath he reasoned in the synagogue, trying to
                 persuade Jews and Greeks.
               </p>
-            </div>
-
-            <div className="title">
-              {/* <img src="./img/check.png" alt="" />
-              Manage teamwork and boost productivity with one powerful workspace */}
             </div>
             <button>Explore DDS Business</button>
           </div>
