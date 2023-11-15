@@ -1,0 +1,99 @@
+.about-page {
+    width: 100%;
+    background: linear-gradient(300deg,#f5eded,#efe8e8,#999292);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+        @keyframes gradient-animation {
+            0% {
+              background-position: 0% 50%;
+            }
+            50% {
+              background-position: 100% 50%;
+            }
+            100% {
+              background-position: 0% 50%;
+            }
+          }
+
+    .culture {
+        width: 100%;
+        
+
+
+
+        h1 {
+
+            margin-left: 15rem;
+            text-decoration: underline;
+        }
+    }
+
+    .about-culture {
+        width: 100%;
+        display: flex;
+        background: orangered;
+        margin: 5rem;
+
+
+        p {
+            font-size: 2em;
+            margin-top: 10rem;
+            margin-left: 15rem;
+            color: white;
+        }
+
+        img {
+            width: 30%;
+            height: 10%;
+            margin-right: 15rem;
+            border-radius: 50px;
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            -ms-border-radius: 50px;
+            -o-border-radius: 50px;
+            margin-top: 10rem;
+        }
+    }
+
+    .overview {
+        margin: 1rem;
+        border: 4px solid rgb(4, 4, 4);
+        display: flex;
+
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fa4616;
+            font-size: 3.75rem;
+            line-height: 1.2;
+        }
+
+        p {
+            word-spacing: normal;
+            word-wrap: break-word;
+            padding: 4rem;
+            line-break: normal;
+            width: 90%;
+            justify-content: center;
+            font-size: 1.2em;
+
+            strong {
+                color: rgb(10, 10, 10);
+                text-decoration: underline;
+            }
+        }
+
+        img {
+            width: 100%;
+            margin-top: 8rem;
+            margin-left: 2rem;
+            border-radius: 30px;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            -ms-border-radius: 30px;
+            -o-border-radius: 30px;
+        }
+    }
+}

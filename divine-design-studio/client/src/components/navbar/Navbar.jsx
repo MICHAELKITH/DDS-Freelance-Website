@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+// import { FaBars, FaTimes } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import newRequest from "../../utils/newRequest";
 import DDS from "/img/DDS.png";
@@ -50,13 +50,25 @@ function Navbar() {
             <img className="Logo" src={DDS} alt="" />
           </Link>
         </div>
-        <div className="links" >
+        <div className="links">
           <nav className="nav-items" ref={navRef}>
+            <Link className="link" to="/">
             <span>Home</span>
+            </Link>
+            <Link  className="link" to="/about">
             <span>About</span>
+            </Link>
+            
+            <Link className="link">
             <span>Our Clients</span>
+            </Link>
+            <Link className="link">
             <span>Products </span>
+            </Link>
+            <Link className="link">
             <span>Services </span>
+            </Link>
+          
 
             {!currentUser?.isSeller && <span>Become a Freelancer</span>}
             {currentUser ? (
@@ -99,29 +111,19 @@ function Navbar() {
             )}
 
             <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-            <svg
-      viewBox="0 0 470 1000"
-      fill="red"
-      height="2em"
-      width="1em"
-    >
-      <path d="M452 656c12 12 18 26.333 18 43s-6 31-18 43c-12 10.667-26.333 16-43 16s-31-5.333-43-16L234 590 102 742c-12 10.667-26.333 16-43 16s-31-5.333-43-16C5.333 730 0 715.667 0 699s5.333-31 16-43l138-156L16 342C5.333 330 0 315.667 0 299s5.333-31 16-43c12-10.667 26.333-16 43-16s31 5.333 43 16l132 152 132-152c12-10.667 26.333-16 43-16s31 5.333 43 16c12 12 18 26.333 18 43s-6 31-18 43L314 500l138 156" />
-    </svg>
+              <svg viewBox="0 0 470 1000" fill="red" height="2em" width="1em">
+                <path d="M452 656c12 12 18 26.333 18 43s-6 31-18 43c-12 10.667-26.333 16-43 16s-31-5.333-43-16L234 590 102 742c-12 10.667-26.333 16-43 16s-31-5.333-43-16C5.333 730 0 715.667 0 699s5.333-31 16-43l138-156L16 342C5.333 330 0 315.667 0 299s5.333-31 16-43c12-10.667 26.333-16 43-16s31 5.333 43 16l132 152 132-152c12-10.667 26.333-16 43-16s31 5.333 43 16c12 12 18 26.333 18 43s-6 31-18 43L314 500l138 156" />
+              </svg>
             </button>
           </nav>
 
           <button className="nav-btn" onClick={showNavbar}>
-          <svg
-      viewBox="0 0 1 16"
-      fill="red"
-      height="1em"
-      width="2em"
-    >
-      <path
-        fillRule="evenodd"
-        d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"
-      />
-    </svg>
+            <svg viewBox="0 0 1 16" fill="red" height="1em" width="2em">
+              <path
+                fillRule="evenodd"
+                d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"
+              />
+            </svg>
           </button>
         </div>
       </div>

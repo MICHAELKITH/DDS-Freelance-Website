@@ -8,10 +8,9 @@ function Footer() {
         <div className="top">
           <div className="item">
             <h2>About</h2>
-            <span>History</span>
-            <span>Board Members</span>
+            <span>Who We Are </span>
             <span>Meet the Team</span>
-            <span>Spritual Entrepreneurship</span>
+            <span>Spiritual Entrepreneurship</span>
           </div>
           <div className="item">
             <h2>Products</h2>
