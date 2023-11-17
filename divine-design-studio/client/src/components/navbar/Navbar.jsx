@@ -7,6 +7,44 @@ import DDS from "/img/DDS.png";
 import "./Navbar.scss";
 
 function Navbar() {
+  const [clientsDropdownOpen, setClientsDropdownOpen] = useState(false);
+  const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
+  const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+
+  const toggleClientsDropdown = () => {
+    setClientsDropdownOpen(!clientsDropdownOpen);
+    setProductsDropdownOpen(false);
+    setServicesDropdownOpen(false);
+    setAboutDropdownOpen(false);
+  };
+  const toggleAboutDropdown = () => {
+    setAboutDropdownOpen(!aboutDropdownOpen);
+    setClientsDropdownOpen(false);
+    setProductsDropdownOpen(false);
+    setServicesDropdownOpen(false);
+  };
+
+  const toggleProductsDropdown = () => {
+    setProductsDropdownOpen(!productsDropdownOpen);
+    setClientsDropdownOpen(false);
+    setServicesDropdownOpen(false);
+    setAboutDropdownOpen(false);
+  };
+
+  const toggleServicesDropdown = () => {
+    setServicesDropdownOpen(!servicesDropdownOpen);
+    setClientsDropdownOpen(false);
+    setProductsDropdownOpen(false);
+    setAboutDropdownOpen(false);
+  };
+
+  const closeAllDropdowns = () => {
+    setAboutDropdownOpen(false);
+    setClientsDropdownOpen(false);
+    setProductsDropdownOpen(false);
+    setServicesDropdownOpen(false);
+  };
   const navRef = useRef();
 
   const showNavbar = () => {
@@ -25,6 +63,20 @@ function Navbar() {
     window.addEventListener("scroll", isActive);
     return () => {
       window.removeEventListener("scroll", isActive);
+    };
+  }, []);
+
+  useEffect(() => {
+    const closeDropdownOnBodyClick = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        closeAllDropdowns();
+      }
+    };
+
+    document.body.addEventListener("click", closeDropdownOnBodyClick);
+
+    return () => {
+      document.body.removeEventListener("click", closeDropdownOnBodyClick);
     };
   }, []);
 
@@ -53,22 +105,113 @@ function Navbar() {
         <div className="links">
           <nav className="nav-items" ref={navRef}>
             <Link className="link" to="/">
-            <span>Home</span>
+              <span>Home</span>
             </Link>
-            <Link  className="link" to="/about">
-            <span>About</span>
-            </Link>
-            
-            <Link className="link">
-            <span>Our Clients</span>
-            </Link>
-            <Link className="link">
-            <span>Products </span>
-            </Link>
-            <Link className="link">
-            <span>Services </span>
-            </Link>
-          
+            <div
+              className="dropdown"
+              onMouseEnter={toggleAboutDropdown}
+              onMouseLeave={closeAllDropdowns}
+            >
+              <span className="link">About</span>
+              {aboutDropdownOpen && (
+                <div className="dropdown-content">
+                  <Link className="dropdown-link" to="/about">
+                    Who We Are
+                  </Link>
+                  <Link className="dropdown-link" to="/team">
+                    Meet the Team
+                  </Link>
+                  <Link className="dropdown-link" to="/team">
+                    Spiritual Entrepreneurship
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <div
+              className="dropdown"
+              onMouseEnter={toggleClientsDropdown}
+              onMouseLeave={closeAllDropdowns}
+            >
+              <span className="link">Our Clients</span>
+              {clientsDropdownOpen && (
+                <div className="dropdown-content">
+                  {/* <Link className="dropdown-link" to="/client1">
+                    Client 1
+                  </Link>
+                  <Link className="dropdown-link" to="/client2">
+                    Client 2
+                  </Link> */}
+                </div>
+              )}
+            </div>
+            <div
+              className="dropdown"
+              onMouseEnter={toggleProductsDropdown}
+              onMouseLeave={closeAllDropdowns}
+            >
+              <span className="link">Products</span>
+              {productsDropdownOpen && (
+                <div className="dropdown-content">
+                  <Link className="dropdown-link" to="/product1">
+                    Clothing
+                  </Link>
+                  <Link className="dropdown-link" to="/product2">
+                    Music
+                  </Link>
+                  <Link className="dropdown-link" to="/product2">
+                    Design
+                  </Link>
+                  <Link className="dropdown-link" to="/product2">
+                    Technology
+                  </Link>
+                  <Link className="dropdown-link" to="/product2">
+                    Marketing
+                  </Link>
+                </div>
+              )}
+            </div>
+            <div
+              className="dropdown"
+              onMouseEnter={toggleServicesDropdown}
+              onMouseLeave={closeAllDropdowns}
+            >
+              <span className="link">Services</span>
+              {servicesDropdownOpen && (
+                <div className="dropdown-content">
+                  <Link className="dropdown-link" to="/service1">
+                    Graphics & Design
+                  </Link>
+                  <Link className="dropdown-link" to="/service2">
+                    Video & Animation
+                  </Link>
+                  <Link className="dropdown-link" to="/service1">
+                    Digital Marketing
+                  </Link>
+                  <Link className="dropdown-link" to="/service2">
+                    Product Development
+                  </Link>
+                  <Link className="dropdown-link" to="/service1">
+                    Music & Audio
+                  </Link>
+                  <Link className="dropdown-link" to="/service2">
+                    Song Writing
+                  </Link>
+                  <Link className="dropdown-link" to="/service1">
+                    Programming & Tech
+                  </Link>
+                  <Link className="dropdown-link" to="/service2">
+                    Virtual Reality
+                  </Link>
+                  <Link className="dropdown-link" to="/service1">
+                    Fashion Design
+                  </Link>
+                  <Link className="dropdown-link" to="/service2">
+                    Media & Production
+                  </Link>
+                </div>
+              )}
+            </div>
 
             {!currentUser?.isSeller && <span>Become a Freelancer</span>}
             {currentUser ? (
