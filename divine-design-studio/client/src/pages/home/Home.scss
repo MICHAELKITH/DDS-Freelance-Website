@@ -12,7 +12,6 @@
     justify-content: center;
     padding: 100px 0px;
     background: black;
-    // display: none;
 
     &.dark {
       background-color: #0d084d;
@@ -174,12 +173,12 @@
 @media screen and (max-width: 768px) {
   .features {
     width: 100%;
-
     .container {
       display: flex;
       flex-direction: column;
       width: 100%;
-      word-break: break-all;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
       padding-left: 10px;
       margin-top: -9rem;
 
@@ -203,9 +202,8 @@
   }
 
   .home .features .container .item p {
-    font-size: 1rem;
-    word-break: break-word
-    // display: none;
+    font-size: .9rem;
+
   }
 
   .home .explore .container {

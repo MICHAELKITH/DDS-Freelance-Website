@@ -52,7 +52,16 @@
             height: 10%;
             margin-right: 45rem;
 
-            margin-top: 5rem;
+            margin-top: 8rem;
+        }
+    }
+
+
+
+    @media screen and (max-width: 767px) {
+        .about-page{
+            display: flex;
+            flex-direction: column;
         }
     }
 
