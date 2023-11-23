@@ -58,16 +58,11 @@
 
 
 
-    @media screen and (max-width: 767px) {
-        .about-page{
-            display: flex;
-            flex-direction: column;
-        }
-    }
+
 
     .about-sect {
-      margin-top: -26rem;
-    
+        margin-top: -26rem;
+
         hr {
             width: 50%;
             margin-left: 32%;
@@ -97,6 +92,7 @@
                     word-wrap: break-word;
                     line-break: normal;
                     justify-content: center;
+
                     span {
                         padding-top: 10rem;
 
@@ -133,4 +129,31 @@
         }
     }
 
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+    .about-page {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .culture {
+            font-size: 10px;
+            max-width: max-content;
+
+            p, h1{
+                line-height: 1;
+                padding-left: 1rem
+            }
+        }
+
+        .about-culture{
+            display: flex;
+            flex-direction: column;
+            margin-right: 100rem;
+        }
+    }
 }

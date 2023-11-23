@@ -11,18 +11,21 @@ function Navbar() {
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [becomeFreelancerDropdownOpen, setbecomeFreelancerDropdownOpen] = useState(false);
 
   const toggleClientsDropdown = () => {
     setClientsDropdownOpen(!clientsDropdownOpen);
     setProductsDropdownOpen(false);
     setServicesDropdownOpen(false);
     setAboutDropdownOpen(false);
+    setbecomeFreelancerDropdownOpen(false);
   };
   const toggleAboutDropdown = () => {
     setAboutDropdownOpen(!aboutDropdownOpen);
     setClientsDropdownOpen(false);
     setProductsDropdownOpen(false);
     setServicesDropdownOpen(false);
+    setbecomeFreelancerDropdownOpen(false);
   };
 
   const toggleProductsDropdown = () => {
@@ -30,6 +33,7 @@ function Navbar() {
     setClientsDropdownOpen(false);
     setServicesDropdownOpen(false);
     setAboutDropdownOpen(false);
+    setbecomeFreelancerDropdownOpen(false);
   };
 
   const toggleServicesDropdown = () => {
@@ -37,6 +41,7 @@ function Navbar() {
     setClientsDropdownOpen(false);
     setProductsDropdownOpen(false);
     setAboutDropdownOpen(false);
+    setbecomeFreelancerDropdownOpen(false);
   };
 
   const closeAllDropdowns = () => {
@@ -44,6 +49,14 @@ function Navbar() {
     setClientsDropdownOpen(false);
     setProductsDropdownOpen(false);
     setServicesDropdownOpen(false);
+    setbecomeFreelancerDropdownOpen(false);
+  };
+  const toggleBecomeFreelancerDropdownOpen = () => {
+    setbecomeFreelancerDropdownOpen(!becomeFreelancerDropdownOpen);
+    setProductsDropdownOpen(false);
+    setServicesDropdownOpen(false);
+    setAboutDropdownOpen(false);
+    setClientsDropdownOpen(false);
   };
   const navRef = useRef();
 
@@ -213,7 +226,25 @@ function Navbar() {
               )}
             </div>
 
-            {!currentUser?.isSeller && <span>Become a Freelancer</span>}
+            {!currentUser?.isSeller && (
+        <div
+          className="dropdown"
+          onMouseEnter={toggleBecomeFreelancerDropdownOpen}
+          onMouseLeave={closeAllDropdowns}
+        >
+          <span className="link">Become a Freelancer</span>
+          {becomeFreelancerDropdownOpen && (
+            <div className="dropdown-content">
+
+              <Link className="dropdown-link" to="/become-freelancer">
+                Careers
+              </Link>
+    
+
+            </div>
+          )}
+        </div>
+      )}
             {currentUser ? (
               <div className="user" onClick={() => setOpen(!open)}>
                 <img src={currentUser.img || "/img/noavatar.jpg"} alt="" />

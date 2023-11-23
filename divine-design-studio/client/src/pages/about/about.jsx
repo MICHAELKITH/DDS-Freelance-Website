@@ -19,8 +19,6 @@ const about = () => {
         <h1>Who We Are</h1>
       </div>
 
-      <div></div>
-
       <div className="about-culture">
         <p>
           We are called Divine Design Studio, which also stands for DDS. As
