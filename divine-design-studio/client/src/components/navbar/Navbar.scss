@@ -1,11 +1,10 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
 
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	font-family: "Titillium Web", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
 }
 
 .navbar {
@@ -20,6 +19,7 @@
   transition: 0.5s all ease;
   width: 100%;
   height: 10vh;
+
   &.active {
     background-color: #050505;
     color: rgb(0, 0, 0);
@@ -93,64 +93,64 @@
       font-weight: 500;
       flex-direction: row;
       cursor: pointer;
-      color: #c9bb16;
+      color: gold;
       padding-right: 30px;
-      .nav-items {
-        
-        display: flex;
-        
-        gap: 20px;
 
-        
-        &:hover {
+      .nav-items {
+        display: flex;
+        gap: 20px;
+        .link:hover {
           color: #f1f3ea; 
           text-decoration: underline; 
         }
+
         .dropdown {
           position: relative;
           display: inline-block;
-          margin-right: 20px; 
-         
-          
+          margin-right: 20px;
+
+
         }
+
         .dropdown-content {
           display: none;
           position: absolute;
-          top: 100%; 
+          top: 100%;
           left: 0;
           background-color: black;
           box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
           z-index: 1;
-          width: 200px; 
-        
-         
+          width: 200px;
+
+
         }
+
         .dropdown:hover .dropdown-content {
           display: block;
         }
-        
+
         .dropdown-content .dropdown-link {
           color: gold;
           padding: 12px 16px;
           text-decoration: none;
           display: block;
         }
-        
+
         .dropdown-content .dropdown-link:hover {
-       
+
           text-decoration: underline;
         }
       }
-      
-      
+
+
       a {
-        color: #7ec916;
+        color: gold;
         margin-left: 20px;
-        
+
 
         &:hover {
-          color: #faf2f2; 
-          text-decoration: underline; 
+          color: #faf2f2;
+          text-decoration: underline;
         }
       }
 
@@ -195,9 +195,12 @@
         cursor: pointer;
 
         &:hover {
-          background-color: gold; /* Change the background color on hover */
-          border-color: #080808; /* Change the border color on hover */
-          color: #080808; /* Change the text color on hover */
+          background-color: gold;
+          /* Change the background color on hover */
+          border-color: #080808;
+          /* Change the border color on hover */
+          color: #080808;
+          /* Change the text color on hover */
         }
       }
     }
@@ -220,6 +223,7 @@
     font-family: "Montserrat", sans-serif;
     padding-left: 45%;
   }
+
   .nav-btn {
     padding: 5px;
     cursor: pointer;
@@ -237,54 +241,61 @@
   .navbar {
     width: 100%;
     display: none;
+
     .container {
       padding: 20px;
+
       .logo {
-        
-        .Logo{
-        width: 120px;
-        height: 120px;
+
+        .Logo {
+          width: 120px;
+          height: 120px;
         }
       }
+
       .nav-btn {
         visibility: visible;
         opacity: 1;
       }
     }
 
-    
+
 
     .menu {
       width: 100%;
       padding: 10px;
     }
   }
+
   .nav-btn {
-		visibility: visible;
-		opacity: 1;
-    
-    
-	}
-  .nav-items{
-    position: fixed;
-		top: -100vh;
-		right: 0;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 1.5rem;
-		background-color: black;
-		transition: 1s;
+    visibility: visible;
+    opacity: 1;
+
+
   }
+
+  .nav-items {
+    position: fixed;
+    top: -100vh;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: black;
+    transition: 1s;
+  }
+
   .responsive_nav {
-		transform: translateY(100vh);
-	}
+    transform: translateY(100vh);
+  }
+
   .nav-close-btn {
-		position: absolute;
-		top: 2rem;
-		right: 2rem;
-	}
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
 }

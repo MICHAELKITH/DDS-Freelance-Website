@@ -1,0 +1,71 @@
+.team{
+    width: 100%;
+    background: black;
+
+    .intro{
+        width: 100%;
+        background-image: url(https://designwithma.com/wp-content/themes/ma-design/images/bg/pattern-plus-angled-blackorange-seamless.png);
+        background-color: black;
+        background-position: right top;
+        background-repeat: repeat-y;
+        background-size: 50%;
+        min-height: 100px;
+
+        h1 {
+
+            color: #fff;
+            font-size: 5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            padding-left: 15rem;
+            
+
+        }
+    }
+    .container{
+        display: flex;
+        gap: 45rem;
+        .people{
+            width: 30%;
+            margin-top: 3rem;
+            .people-images{
+                display: grid;
+                grid-template-columns: auto auto auto;
+                padding: 40px;
+                list-style: none;
+                gap: 20px;
+
+                li{
+                    
+                    img{
+                        width: 25rem;
+                    }
+                }
+            }
+        }
+    }
+    .news-list{
+        margin-left: 10rem;
+        margin-top: 5rem;
+        .filter-list{
+            
+            h2{
+                color: rgb(255, 64, 0);
+            }
+            .filter-category{
+                list-style: none;
+                gap: 20px;
+
+                li{
+                    color: gold;
+                    cursor: pointer;
+                }
+                li:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+
+}
