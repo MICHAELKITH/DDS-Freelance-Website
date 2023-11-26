@@ -163,7 +163,7 @@ function Navbar() {
               onMouseEnter={toggleProductsDropdown}
               onMouseLeave={closeAllDropdowns}
             >
-              <span className="link">Products</span>
+              <span className="link">Divisions</span>
               {productsDropdownOpen && (
                 <div className="dropdown-content">
                   <Link className="dropdown-link" to="/product1">

@@ -1,8 +1,8 @@
-.team{
+.team {
     width: 100%;
     background: black;
 
-    .intro{
+    .intro {
         width: 100%;
         background-image: url(https://designwithma.com/wp-content/themes/ma-design/images/bg/pattern-plus-angled-blackorange-seamless.png);
         background-color: black;
@@ -18,49 +18,90 @@
             font-weight: 700;
             line-height: 1.2;
             padding-left: 15rem;
-            
+
 
         }
     }
-    .container{
+
+    .container {
         display: flex;
-        gap: 45rem;
-        .people{
+        gap: 20rem;
+
+        .people {
             width: 30%;
             margin-top: 3rem;
-            .people-images{
+            margin-left: 15rem;
+
+            .people-images {
                 display: grid;
                 grid-template-columns: auto auto auto;
                 padding: 40px;
                 list-style: none;
                 gap: 20px;
 
-                li{
-                    
-                    img{
-                        width: 25rem;
+                li {
+
+                    img {
+                        width: 18rem;
                     }
                 }
+
+                .image-container {
+                    position: relative;
+                }
+
+                .image-container img {
+                    height: auto;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                }
+
+                .text-overlay {
+
+                    position: absolute;
+                    top: 16rem;
+                    left: 10px;
+                    background: transparent;
+                    padding: 8px;
+                    border-radius: 4px;
+                }
+
+                .text-overlay 
+                p{
+                    margin: 0;
+                    font-size: 16px;
+                    color: rgb(249, 248, 244);
+                    font-weight: bold;
+                   span{
+                    font-weight: 100;
+                   }
+
+                }
+                
             }
         }
     }
-    .news-list{
+
+    .news-list {
         margin-left: 10rem;
         margin-top: 5rem;
-        .filter-list{
-            
-            h2{
+
+        .filter-list {
+
+            h2 {
                 color: rgb(255, 64, 0);
             }
-            .filter-category{
+
+            .filter-category {
                 list-style: none;
                 gap: 20px;
 
-                li{
+                li {
                     color: gold;
                     cursor: pointer;
                 }
-                li:hover{
+
+                li:hover {
                     text-decoration: underline;
                 }
             }

@@ -1,8 +1,10 @@
 import React from "react";
-import Backimg4 from "/img/SLIDE 1.jpg";
-import Backimg5 from "/img/SLIDE 2.jpg";
-import Backimg6 from "/img/SLIDE 3.jpg";
-import Backimg9 from "/img/SLIDE 4.jpg";
+import Backimg from "/img/philip.jpg";
+import Backimg0 from "/img/mike.jpg";
+import Backimg1 from "/img/gloria.jpg";
+import Backimg2 from "/img/david.jpg";
+import Backimg3 from "/img/noble 3.jpg";
+import Backimg4 from "/img/godwin.jpg";
 import "./team.scss";
 const team = () => {
   return (
@@ -13,27 +15,66 @@ const team = () => {
 
       <div className="container">
         <div className="people">
-            <ul className="people-images">
-                <li><img src={Backimg4} alt="" /></li>
-                <li><img src={Backimg5}alt="" /></li>
-                <li><img src={Backimg6} alt="" /></li>
-                <li><img src={Backimg9} alt="" /></li>
-                <li><img src={Backimg6} alt="" /></li>
-                <li><img src={Backimg9} alt="" /></li>
-                <li><img src={Backimg6} alt="" /></li>
-                <li><img src={Backimg9} alt="" /></li>
-                <li><img src={Backimg9} alt="" /></li>
-            </ul>
+          <ul className="people-images">
+            <li className="image-container">
+              <img src={Backimg1} alt="Image 1" />
+              <div className="text-overlay">
+                <p>
+                 Gloria Namuyomba - Uganda <br />
+                  <span >Assistant Music Studio Manager</span>
+                </p>
+              </div>
+            </li>
+            <li className="image-container">
+              <img src={Backimg} alt="Image 1" />
+              <div className="text-overlay">
+                <p>
+                  Philip Dodoo- Ghana <br />
+                  <span>Creative Design Manager</span>
+                </p>
+              </div>
+            </li>
+            <li className="image-container">
+              <img src={Backimg0} alt="Image 1" />
+              <div className="text-overlay">
+                <p>
+                   Michael Kithinji - Kenya <br />
+                  <span>Technology Development Manager</span>
+                </p>
+              </div>
+            </li>
+            <li className="image-container">
+              <img src={Backimg4} alt="Image 1" />
+              <div className="text-overlay">
+                <p>
+                   Adebayo Godwin Wealth - Nigeria <br />
+                  <span>Fashion Design Manager</span>
+                </p>
+              </div>
+            </li>
+            <li className="image-container">
+              <img src={Backimg2} alt="Image 1" />
+              <div className="text-overlay">
+                <p>
+                   Ssenfuma David - Uganda <br />
+                  <span>Music Studio Manager</span>
+                </p>
+              </div>
+            </li>
+            <li className="image-container">
+              <img src={Backimg3} alt="Image 1" />
+              <div className="text-overlay">
+                <p>
+                Noble Selorm Dzreh - Ghana <br />
+                  <span>Organizational Training Director</span>
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
         <div className="news-list">
           <div className="filter-list">
-            <h2>About</h2>
-            <ul className="filter-category">
-              <li>Who We Are</li>
-              <li>Meet the Team</li>
-              <li>Spiritual Entrepreneurship</li>
-            </ul>
-            <h2>Products</h2>
+            <h2>Divisions</h2>
             <ul className="filter-category">
               <li>Clothing</li>
               <li>Music</li>
@@ -54,10 +95,6 @@ const team = () => {
               <li>Virtual Reality</li>
               <li>Fashion Design</li>
               <li>Media & Production</li>
-            </ul>
-            <h2>Become a Freelancer</h2>
-            <ul className="filter-category">
-              <li>Careers</li>
             </ul>
           </div>
         </div>

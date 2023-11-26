@@ -13,7 +13,7 @@ function Footer() {
             <span>Spiritual Entrepreneurship</span>
           </div>
           <div className="item">
-            <h2>Products</h2>
+            <h2>Divisions</h2>
             <span>Clothing </span>
             <span> Music</span>
             <span>Design</span>
