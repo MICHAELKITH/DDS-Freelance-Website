@@ -146,7 +146,7 @@ function Navbar() {
               onMouseEnter={toggleClientsDropdown}
               onMouseLeave={closeAllDropdowns}
             >
-              <span className="link">Our Clients</span>
+              <span className="link">Our Works</span>
               {clientsDropdownOpen && (
                 <div className="dropdown-content">
                   {/* <Link className="dropdown-link" to="/client1">

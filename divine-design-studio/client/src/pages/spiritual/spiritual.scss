@@ -114,21 +114,21 @@
 @media screen and (max-width: 768px) {
     .team{
          .intro {
-            
+            display: none;
         }
         .container{
             .people{
-                display: flex;
+                justify-content: center;
+                align-items: center;
                 .people-images{
-                    justify-content: center;
-                    align-items: center;
-                    padding-left: 100px;
-
+                     display: flex;
+                flex-direction: column;
+                    margin-right: 10rem;
                 }
             }
         }
         .news-list{
-           
+            display: none;
         }
     }
 }
