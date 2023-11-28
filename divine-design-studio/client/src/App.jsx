@@ -17,6 +17,7 @@ import MyGigs from "./pages/myGigs/MyGigs";
 import Team from "./pages/team/team";
 import Spiritual from "./pages/spiritual/spiritual";
 import Work from "./pages/work/work";
+import Division from "./pages/division/division";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Pay from "./pages/pay/Pay";
 import Success from "./pages/success/Success";
@@ -103,6 +104,10 @@ function App() {
         {
           path: "/work",
           element: <Work />,
+        },
+        {
+          path: "/division",
+          element: <Division/>,
         },
       ],
     },
