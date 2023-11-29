@@ -1,11 +1,10 @@
 .slide {
   display: flex;
   justify-content: center;
-  padding: 100px 0px;
+  padding: 100px 0;
   background-color: black;
   width: 100%;
   flex-direction: row;
- 
 
 
   .container {
@@ -23,7 +22,6 @@
 
   .carousel-initialized {
     position: static;
-
   }
 
   .carousel-prev,
@@ -36,7 +34,6 @@
     top: 0;
     bottom: 0;
     margin: auto;
-
   }
 
   .carousel-prev {
@@ -45,18 +42,18 @@
 }
 
 @media screen and (max-width: 768px) {
-  .slide{
+  .slide {
     width: 100%;
   }
+
   .slide .topics {
     font-size: 2rem;
     padding-left: 38px;
     padding-top: -20px;
-
   }
-  .slide1{
+
+  .slide1 {
     display: grid;
     gap: 10rem;
-
   }
 }

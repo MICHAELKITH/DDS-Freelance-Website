@@ -1,26 +1,21 @@
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import React from "react";
-import newRequest from "../../utils/newRequest";
-import Review from "../review/Review";
-import "./Reviews.scss";
-const Reviews = ({ gigId }) => {
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import React from 'react';
+import newRequest from '../../utils/newRequest';
+import Review from '../review/Review';
+import './Reviews.scss';
 
-  const queryClient = useQueryClient()
+const Reviews = ({ gigId }) => {
+  const queryClient = useQueryClient();
   const { isLoading, error, data } = useQuery({
-    queryKey: ["reviews"],
-    queryFn: () =>
-      newRequest.get(`/reviews/${gigId}`).then((res) => {
-        return res.data;
-      }),
+    queryKey: ['reviews'],
+    queryFn: () => newRequest.get(`/reviews/${gigId}`).then((res) => res.data),
   });
 
   const mutation = useMutation({
-    mutationFn: (review) => {
-      return newRequest.post("/reviews", review);
+    mutationFn: (review) => newRequest.post('/reviews', review),
+    onSuccess: () => {
+      queryClient.invalidateQueries(['reviews']);
     },
-    onSuccess:()=>{
-      queryClient.invalidateQueries(["reviews"])
-    }
   });
 
   const handleSubmit = (e) => {
@@ -34,10 +29,10 @@ const Reviews = ({ gigId }) => {
     <div className="reviews">
       <h2>Reviews</h2>
       {isLoading
-        ? "loading"
+        ? 'loading'
         : error
-        ? "Something went wrong!"
-        : data.map((review) => <Review key={review._id} review={review} />)}
+          ? 'Something went wrong!'
+          : data.map((review) => <Review key={review._id} review={review} />)}
       <div className="add">
         <h3>Add a review</h3>
         <form action="" className="addForm" onSubmit={handleSubmit}>

@@ -1,44 +1,40 @@
-import React, { useState } from "react";
-import upload from "../../utils/upload";
-import "./Register.scss";
-import newRequest from "../../utils/newRequest";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from 'react';
+import upload from '../../utils/upload';
+import './Register.scss';
+import newRequest from '../../utils/newRequest';
+import { useNavigate } from 'react-router-dom';
 
 function Register() {
   const [file, setFile] = useState(null);
   const [user, setUser] = useState({
-    username: "",
-    email: "",
-    password: "",
-    img: "",
-    country: "",
+    username: '',
+    email: '',
+    password: '',
+    img: '',
+    country: '',
     isSeller: false,
-    desc: "",
+    desc: '',
   });
 
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-    setUser((prev) => {
-      return { ...prev, [e.target.name]: e.target.value };
-    });
+    setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleSeller = (e) => {
-    setUser((prev) => {
-      return { ...prev, isSeller: e.target.checked };
-    });
+    setUser((prev) => ({ ...prev, isSeller: e.target.checked }));
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const url = await upload(file);
     try {
-      await newRequest.post("/auth/register", {
+      await newRequest.post('/auth/register', {
         ...user,
         img: url,
       });
-      navigate("/")
+      navigate('/');
     } catch (err) {
       console.log(err);
     }
@@ -81,7 +77,7 @@ function Register() {
             <label htmlFor="">Activate the seller account</label>
             <label className="switch">
               <input type="checkbox" onChange={handleSeller} />
-              <span className="slider round"></span>
+              <span className="slider round" />
             </label>
           </div>
           <label htmlFor="">Phone Number</label>
@@ -99,7 +95,7 @@ function Register() {
             cols="30"
             rows="10"
             onChange={handleChange}
-          ></textarea>
+          />
         </div>
       </form>
     </div>

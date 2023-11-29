@@ -136,8 +136,8 @@
 @media screen and (max-width: 768px) {
   .featured {
     width: 100%;
-   top: -150px;
-   margin-bottom: -150px;
+    top: -150px;
+    margin-bottom: -150px;
   }
 
   .featured .container {
@@ -148,8 +148,6 @@
 
   .featured .container .left h1 {
     font-size: 1rem;
-
-
   }
 
   .featured .container .left .search {
@@ -157,7 +155,6 @@
   }
 
   .featured .container .left .popular {
-
     color: gold;
     display: flex;
     align-items: center;
@@ -170,7 +167,6 @@
     display: inline-block;
     text-transform: lowercase;
     width: fit-content;
-
   }
 
   .featured .container .left .popular button:nth-child(3) {
@@ -200,14 +196,14 @@
   .featured .container .left .search .searchInput img {
     width: 15px;
     height: 15px;
-    margin: 10px
+    margin: 10px;
   }
 
   .featured .container .left .search .searchInput input {
     font-size: 18px;
   }
+
   .featured .container .left {
     margin-top: 12rem;
   }
-
 }

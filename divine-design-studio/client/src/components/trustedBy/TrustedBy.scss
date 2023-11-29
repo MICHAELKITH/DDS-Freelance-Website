@@ -13,21 +13,21 @@
     color: goldenrod;
     font-weight: 700;
     font-size: 1.6rem;
-  
 
-    img{
+
+    img {
       height: 50px;
       object-fit: contain;
     }
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   // .trustedBy{
   //   margin-bottom: 1000px;
   // }
   .trustedBy .container {
     font-size: 0.8rem;
     color: gold;
-}
+  }
 }

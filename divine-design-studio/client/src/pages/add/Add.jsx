@@ -1,10 +1,10 @@
-import React, { useReducer, useState } from "react";
-import "./Add.scss";
-import { gigReducer, INITIAL_STATE } from "../../reducers/gigReducer";
-import upload from "../../utils/upload";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
-import newRequest from "../../utils/newRequest";
-import { useNavigate } from "react-router-dom";
+import React, { useReducer, useState } from 'react';
+import './Add.scss';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { useNavigate } from 'react-router-dom';
+import { gigReducer, INITIAL_STATE } from '../../reducers/gigReducer';
+import upload from '../../utils/upload';
+import newRequest from '../../utils/newRequest';
 
 const Add = () => {
   const [singleFile, setSingleFile] = useState(undefined);
@@ -15,17 +15,17 @@ const Add = () => {
 
   const handleChange = (e) => {
     dispatch({
-      type: "CHANGE_INPUT",
+      type: 'CHANGE_INPUT',
       payload: { name: e.target.name, value: e.target.value },
     });
   };
   const handleFeature = (e) => {
     e.preventDefault();
     dispatch({
-      type: "ADD_FEATURE",
+      type: 'ADD_FEATURE',
       payload: e.target[0].value,
     });
-    e.target[0].value = "";
+    e.target[0].value = '';
   };
 
   const handleUpload = async () => {
@@ -37,10 +37,10 @@ const Add = () => {
         [...files].map(async (file) => {
           const url = await upload(file);
           return url;
-        })
+        }),
       );
       setUploading(false);
-      dispatch({ type: "ADD_IMAGES", payload: { cover, images } });
+      dispatch({ type: 'ADD_IMAGES', payload: { cover, images } });
     } catch (err) {
       console.log(err);
     }
@@ -51,11 +51,9 @@ const Add = () => {
   const queryClient = useQueryClient();
 
   const mutation = useMutation({
-    mutationFn: (gig) => {
-      return newRequest.post("/gigs", gig);
-    },
+    mutationFn: (gig) => newRequest.post('/gigs', gig),
     onSuccess: () => {
-      queryClient.invalidateQueries(["myGigs"]);
+      queryClient.invalidateQueries(['myGigs']);
     },
   });
 
@@ -100,7 +98,7 @@ const Add = () => {
                 />
               </div>
               <button onClick={handleUpload}>
-                {uploading ? "uploading" : "Upload"}
+                {uploading ? 'uploading' : 'Upload'}
               </button>
             </div>
             <label htmlFor="">Description</label>
@@ -111,7 +109,7 @@ const Add = () => {
               cols="0"
               rows="16"
               onChange={handleChange}
-            ></textarea>
+            />
             <button onClick={handleSubmit}>Create</button>
           </div>
           <div className="details">
@@ -130,7 +128,7 @@ const Add = () => {
               placeholder="Short description of your service"
               cols="30"
               rows="10"
-            ></textarea>
+            />
             <label htmlFor="">Delivery Time (e.g. 3 days)</label>
             <input type="number" name="deliveryTime" onChange={handleChange} />
             <label htmlFor="">Revision Number</label>
@@ -148,9 +146,7 @@ const Add = () => {
               {state?.features?.map((f) => (
                 <div className="item" key={f}>
                   <button
-                    onClick={() =>
-                      dispatch({ type: "REMOVE_FEATURE", payload: f })
-                    }
+                    onClick={() => dispatch({ type: 'REMOVE_FEATURE', payload: f })}
                   >
                     {f}
                     <span>X</span>

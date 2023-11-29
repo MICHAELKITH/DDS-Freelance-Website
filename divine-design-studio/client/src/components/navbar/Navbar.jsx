@@ -1,10 +1,10 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from 'react';
 // import { FaBars, FaTimes } from "react-icons/fa";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import newRequest from "../../utils/newRequest";
-import DDS from "/img/DDS.png";
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import newRequest from '../../utils/newRequest';
+import DDS from '../../../../../../../../img/DDS.png';
 
-import "./Navbar.scss";
+import './Navbar.scss';
 
 function Navbar() {
   const [clientsDropdownOpen, setClientsDropdownOpen] = useState(false);
@@ -61,7 +61,7 @@ function Navbar() {
   const navRef = useRef();
 
   const showNavbar = () => {
-    navRef.current.classList.toggle("responsive_nav");
+    navRef.current.classList.toggle('responsive_nav');
   };
   const [active, setActive] = useState(false);
   const [open, setOpen] = useState(false);
@@ -73,9 +73,9 @@ function Navbar() {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", isActive);
+    window.addEventListener('scroll', isActive);
     return () => {
-      window.removeEventListener("scroll", isActive);
+      window.removeEventListener('scroll', isActive);
     };
   }, []);
 
@@ -86,29 +86,29 @@ function Navbar() {
       }
     };
 
-    document.body.addEventListener("click", closeDropdownOnBodyClick);
+    document.body.addEventListener('click', closeDropdownOnBodyClick);
 
     return () => {
-      document.body.removeEventListener("click", closeDropdownOnBodyClick);
+      document.body.removeEventListener('click', closeDropdownOnBodyClick);
     };
   }, []);
 
-  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
   const navigate = useNavigate();
 
   const handleLogout = async () => {
     try {
-      await newRequest.post("/auth/logout");
-      localStorage.setItem("currentUser", null);
-      navigate("/");
+      await newRequest.post('/auth/logout');
+      localStorage.setItem('currentUser', null);
+      navigate('/');
     } catch (err) {
       console.log(err);
     }
   };
 
   return (
-    <div className={active || pathname !== "/" ? "navbar active" : "navbar"}>
+    <div className={active || pathname !== '/' ? 'navbar active' : 'navbar'}>
       <div className="container">
         <div className="logo">
           <Link className="link" to="/">
@@ -227,27 +227,26 @@ function Navbar() {
             </div>
 
             {!currentUser?.isSeller && (
-        <div
-          className="dropdown"
-          onMouseEnter={toggleBecomeFreelancerDropdownOpen}
-          onMouseLeave={closeAllDropdowns}
-        >
-          <span className="link">Become a Freelancer</span>
-          {becomeFreelancerDropdownOpen && (
-            <div className="dropdown-content">
+            <div
+              className="dropdown"
+              onMouseEnter={toggleBecomeFreelancerDropdownOpen}
+              onMouseLeave={closeAllDropdowns}
+            >
+              <span className="link">Become a Freelancer</span>
+              {becomeFreelancerDropdownOpen && (
+              <div className="dropdown-content">
 
-              <Link className="dropdown-link" to="/become-freelancer">
-                Careers
-              </Link>
-    
+                <Link className="dropdown-link" to="/become-freelancer">
+                  Careers
+                </Link>
 
+              </div>
+              )}
             </div>
-          )}
-        </div>
-      )}
+            )}
             {currentUser ? (
               <div className="user" onClick={() => setOpen(!open)}>
-                <img src={currentUser.img || "/img/noavatar.jpg"} alt="" />
+                <img src={currentUser.img || '/img/noavatar.jpg'} alt="" />
                 <span>{currentUser?.username}</span>
                 {open && (
                   <div className="options">
@@ -307,10 +306,10 @@ function Navbar() {
           <hr />
           <div className="menu">
             <Link className="link menuLink" to="/">
-              Marketing 
+              Marketing
             </Link>
             <Link className="link menuLink" to="/">
-              Design 
+              Design
             </Link>
             <Link className="link menuLink" to="/">
               Technology
@@ -321,7 +320,7 @@ function Navbar() {
             <Link className="link menuLink" to="/">
               Music
             </Link>
-            
+
           </div>
           <hr />
         </>

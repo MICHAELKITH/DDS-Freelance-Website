@@ -1,24 +1,21 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
-import "./Orders.scss";
-import { useQuery } from "@tanstack/react-query";
-import newRequest from "../../utils/newRequest";
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import './Orders.scss';
+import { useQuery } from '@tanstack/react-query';
+import newRequest from '../../utils/newRequest';
 
 const Orders = () => {
-  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
   const navigate = useNavigate();
   const { isLoading, error, data } = useQuery({
-    queryKey: ["orders"],
-    queryFn: () =>
-      newRequest.get(`/orders`).then((res) => {
-        return res.data;
-      }),
+    queryKey: ['orders'],
+    queryFn: () => newRequest.get('/orders').then((res) => res.data),
   });
 
   const handleContact = async (order) => {
-    const sellerId = order.sellerId;
-    const buyerId = order.buyerId;
+    const { sellerId } = order;
+    const { buyerId } = order;
     const id = sellerId + buyerId;
 
     try {
@@ -26,7 +23,7 @@ const Orders = () => {
       navigate(`/message/${res.data.id}`);
     } catch (err) {
       if (err.response.status === 404) {
-        const res = await newRequest.post(`/conversations/`, {
+        const res = await newRequest.post('/conversations/', {
           to: currentUser.seller ? buyerId : sellerId,
         });
         navigate(`/message/${res.data.id}`);
@@ -36,9 +33,9 @@ const Orders = () => {
   return (
     <div className="orders">
       {isLoading ? (
-        "loading"
+        'loading'
       ) : error ? (
-        "error"
+        'error'
       ) : (
         <div className="container">
           <div className="title">

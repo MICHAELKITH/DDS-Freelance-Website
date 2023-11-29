@@ -1,28 +1,25 @@
-import { useQuery } from "@tanstack/react-query";
-import React from "react";
-import newRequest from "../../utils/newRequest";
-import "./Review.scss";
+import { useQuery } from '@tanstack/react-query';
+import React from 'react';
+import newRequest from '../../utils/newRequest';
+import './Review.scss';
+
 const Review = ({ review }) => {
   const { isLoading, error, data } = useQuery(
     {
       queryKey: [review.userId],
-      queryFn: () =>
-        newRequest.get(`/users/${review.userId}`).then((res) => {
-          return res.data;
-        }),
+      queryFn: () => newRequest.get(`/users/${review.userId}`).then((res) => res.data),
     },
   );
-
 
   return (
     <div className="review">
       {isLoading ? (
-        "loading"
+        'loading'
       ) : error ? (
-        "error"
+        'error'
       ) : (
         <div className="user">
-          <img className="pp" src={data.img || "/img/noavatar.jpg"} alt="" />
+          <img className="pp" src={data.img || '/img/noavatar.jpg'} alt="" />
           <div className="info">
             <span>{data.username}</span>
             <div className="country">

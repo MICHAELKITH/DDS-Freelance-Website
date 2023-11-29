@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import "./Featured.scss";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import './Featured.scss';
+import { useNavigate } from 'react-router-dom';
 
-import Backimg1 from "/img/SLIDE 1.jpg";
-import Backimg2 from "/img/SLIDE 2.jpg";
-import Backimg3 from "/img/SLIDE 3.jpg";
-import Backimg4 from "/img/SLIDE 4.jpg";
+import Backimg1 from '../../../../../../../../img/SLIDE 1.jpg';
+import Backimg2 from '../../../../../../../../img/SLIDE 2.jpg';
+import Backimg3 from '../../../../../../../../img/SLIDE 3.jpg';
+import Backimg4 from '../../../../../../../../img/SLIDE 4.jpg';
 
 function Featured() {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = () => {
@@ -19,9 +19,13 @@ function Featured() {
       <div className="container">
         <div className="left">
           <h1>
-            Collaborate with <span> freelancers </span>
+            Collaborate with
+            {' '}
+            <span> freelancers </span>
             <br />
-            Embrace <span> spiritual entrepreneurship</span>
+            Embrace
+            {' '}
+            <span> spiritual entrepreneurship</span>
           </h1>
           <div className="search">
             <div className="searchInput">
@@ -44,7 +48,6 @@ function Featured() {
           </div>
         </div>
 
-       
       </div>
     </div>
   );

@@ -2,11 +2,11 @@
   display: flex;
   justify-content: center;
   color: #c9bb16;
-  margin: 50px 0px;
+  margin: 50px 0;
   background-color: black;
-  margin-top: -.1rem;
+  margin-top: -0.1rem;
   width: 100%;
- 
+
   img {
     width: 24px;
     height: 24px;
@@ -14,18 +14,21 @@
 
   .container {
     width: 1400px;
-    
+
     .top {
       display: flex;
       justify-content: space-between;
+
       .item {
         display: flex;
         flex-direction: column;
         gap: 20px;
+
         h2 {
           font-size: 16px;
           color: #c9bb16;
         }
+
         span {
           font-weight: 300;
         }
@@ -33,10 +36,11 @@
     }
 
     hr {
-      margin: 50px 0px;
+      margin: 50px 0;
       height: 0;
       border: 1px solid #060606;
     }
+
     .bottom {
       display: flex;
       align-items: center;
@@ -53,6 +57,7 @@
           white-space: nowrap;
         }
       }
+
       .right {
         width: max-content;
         display: flex;
@@ -73,67 +78,66 @@
     }
   }
 }
-@media screen and (max-width: 768px){
+
+@media screen and (max-width: 768px) {
   .footer {
     width: 100%;
-
   }
+
   .footer .container {
     color: rgb(220, 222, 235);
     width: 100%;
-
-    
-
   }
+
   .footer .container .top {
     font-size: 10px;
     grid-template-columns: 10fr 1fr 1fr;
     background-color: #0d0d0d;
-   justify-content: center;
-   column-gap: 20px;
-   width: 100%;
-   
+    justify-content: center;
+    column-gap: 20px;
+    width: 100%;
+  }
+
+  .footer .container .top .item {
 
   }
-  .footer .container .top .item {
-    
-  }
-  .footer .container .top .item:nth-child(4){
+
+  .footer .container .top .item:nth-child(4) {
     display: none;
   }
-  .footer .container .top .item:nth-child(5){
+
+  .footer .container .top .item:nth-child(5) {
     display: none;
   }
- 
+
   .footer .container .bottom {
     display: grid;
- 
-
   }
+
   .footer .container .bottom .left {
-   margin-left: 80px;
+    margin-left: 80px;
   }
-  .footer .container .bottom .right  {
 
-
+  .footer .container .bottom .right {
     display: grid;
     cursor: pointer;
-
   }
+
   .footer .container .bottom .right .social {
     margin-left: 5rem;
     padding-top: 20px;
     margin-bottom: 20px;
   }
+
   .footer .container .bottom .right .link:nth-child(2) {
     display: none;
   }
+
   .footer .container .bottom .right .link:nth-child(3) {
     display: none;
   }
+
   .footer .container .bottom .right .link:nth-child(5) {
     display: none;
   }
-
 }
-

@@ -1,20 +1,17 @@
-import React from "react";
-import "./Gig.scss";
-import { Slider } from "infinite-react-carousel/lib";
-import { Link, useParams } from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
-import newRequest from "../../utils/newRequest";
-import Reviews from "../../components/reviews/Reviews";
+import React from 'react';
+import './Gig.scss';
+import { Slider } from 'infinite-react-carousel/lib';
+import { Link, useParams } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
+import newRequest from '../../utils/newRequest';
+import Reviews from '../../components/reviews/Reviews';
 
 function Gig() {
   const { id } = useParams();
 
   const { isLoading, error, data } = useQuery({
-    queryKey: ["gig"],
-    queryFn: () =>
-      newRequest.get(`/gigs/single/${id}`).then((res) => {
-        return res.data;
-      }),
+    queryKey: ['gig'],
+    queryFn: () => newRequest.get(`/gigs/single/${id}`).then((res) => res.data),
   });
 
   const userId = data?.userId;
@@ -24,36 +21,39 @@ function Gig() {
     error: errorUser,
     data: dataUser,
   } = useQuery({
-    queryKey: ["user"],
-    queryFn: () =>
-      newRequest.get(`/users/${userId}`).then((res) => {
-        return res.data;
-      }),
+    queryKey: ['user'],
+    queryFn: () => newRequest.get(`/users/${userId}`).then((res) => res.data),
     enabled: !!userId,
   });
 
   return (
     <div className="gig">
       {isLoading ? (
-        "loading"
+        'loading'
       ) : error ? (
-        "Something went wrong!"
+        'Something went wrong!'
       ) : (
         <div className="container">
           <div className="left">
             <span className="breadcrumbs">
-              Fiverr {">"} Graphics & Design {">"}
+              Fiverr
+              {' '}
+              {'>'}
+              {' '}
+              Graphics & Design
+              {' '}
+              {'>'}
             </span>
             <h1>{data.title}</h1>
             {isLoadingUser ? (
-              "loading"
+              'loading'
             ) : errorUser ? (
-              "Something went wrong!"
+              'Something went wrong!'
             ) : (
               <div className="user">
                 <img
                   className="pp"
-                  src={dataUser.img || "/img/noavatar.jpg"}
+                  src={dataUser.img || '/img/noavatar.jpg'}
                   alt=""
                 />
                 <span>{dataUser.username}</span>
@@ -77,14 +77,14 @@ function Gig() {
             <h2>About This Gig</h2>
             <p>{data.desc}</p>
             {isLoadingUser ? (
-              "loading"
+              'loading'
             ) : errorUser ? (
-              "Something went wrong!"
+              'Something went wrong!'
             ) : (
               <div className="seller">
                 <h2>About The Seller</h2>
                 <div className="user">
-                  <img src={dataUser.img || "/img/noavatar.jpg"} alt="" />
+                  <img src={dataUser.img || '/img/noavatar.jpg'} alt="" />
                   <div className="info">
                     <span>{dataUser.username}</span>
                     {!isNaN(data.totalStars / data.starNumber) && (
@@ -135,17 +135,28 @@ function Gig() {
           <div className="right">
             <div className="price">
               <h3>{data.shortTitle}</h3>
-              <h2>$ {data.price}</h2>
+              <h2>
+                $
+                {data.price}
+              </h2>
             </div>
             <p>{data.shortDesc}</p>
             <div className="details">
               <div className="item">
                 <img src="/img/clock.png" alt="" />
-                <span>{data.deliveryDate} Days Delivery</span>
+                <span>
+                  {data.deliveryDate}
+                  {' '}
+                  Days Delivery
+                </span>
               </div>
               <div className="item">
                 <img src="/img/recycle.png" alt="" />
-                <span>{data.revisionNumber} Revisions</span>
+                <span>
+                  {data.revisionNumber}
+                  {' '}
+                  Revisions
+                </span>
               </div>
             </div>
             <div className="features">
@@ -157,7 +168,7 @@ function Gig() {
               ))}
             </div>
             <Link to={`/pay/${id}`}>
-            <button>Continue</button>
+              <button>Continue</button>
             </Link>
           </div>
         </div>
