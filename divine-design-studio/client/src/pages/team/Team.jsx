@@ -1,10 +1,10 @@
 import React from 'react';
-import Backimg from '../../../../../../../../img/philip.jpg';
-import Backimg0 from '../../../../../../../../img/mike.jpg';
-import Backimg1 from '../../../../../../../../img/gloria.jpg';
-import Backimg2 from '../../../../../../../../img/david.jpg';
-import Backimg3 from '../../../../../../../../img/noble 3.jpg';
-import Backimg4 from '../../../../../../../../img/godwin.jpg';
+import Backimg from '/img/philip.jpg';
+import Backimg0 from '/img/mike.jpg';
+import Backimg1 from '/img/gloria.jpg';
+import Backimg2 from '/img/david.jpg';
+import Backimg3 from '/img/noble 3.jpg';
+import Backimg4 from '/img/godwin.jpg';
 import './team.scss';
 
 const team = () => (

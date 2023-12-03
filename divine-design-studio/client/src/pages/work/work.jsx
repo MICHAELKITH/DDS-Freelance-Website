@@ -1,9 +1,9 @@
 import React from 'react';
-import Backimg1 from '../../../../../../../../img/30324.jpg';
+import Backimg1 from '/img/30324.jpg';
 
 import './work.scss';
 
-const about = () => (
+const work = () => (
   <div className="about-page">
     <div className="culture">
       <h1>Our Work</h1>
@@ -19,4 +19,4 @@ const about = () => (
   </div>
 );
 
-export default about;
+export default work;

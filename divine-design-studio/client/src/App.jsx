@@ -12,6 +12,14 @@ import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import Add from './pages/add/Add';
 import Orders from './pages/orders/Orders';
+import Careers from './pages/careers/career';
+import Clothing from './pages/clothing/clothing';
+import Design from './pages/design/design';
+import Digital from './pages/digital/digital';
+import Graphic from './pages/graphic/graphic';
+import Marketing from './pages/marketing/marketing';
+import Music from './pages/music/music';
+import Product from './pages/product/product';
 import Messages from './pages/messages/Messages';
 import Message from './pages/message/Message';
 import MyGigs from './pages/myGigs/MyGigs';
@@ -19,6 +27,15 @@ import Team from './pages/team/team';
 import Spiritual from './pages/spiritual/spiritual';
 import Work from './pages/work/work';
 import Division from './pages/division/division';
+import Technology from './pages/technology/technology';
+import Video from './pages/video/video';
+import Audio from './pages/audio/audio';
+import Song from './pages/song/song';
+import Program from './pages/program/program';
+import Virtual from './pages/virtual/virtual';
+import Fashion from './pages/fashion/fashion';
+import Media from './pages/media/media';
+
 import Pay from './pages/pay/Pay';
 import Success from './pages/success/Success';
 
@@ -32,6 +49,8 @@ function App() {
         <Outlet />
         <Footer />
       </QueryClientProvider>
+
+      {/* <h1> Lol! keep calm !!Working on the updates</h1> */}
     </div>
   );
 
@@ -107,6 +126,70 @@ function App() {
         {
           path: '/division',
           element: <Division />,
+        },
+        {
+          path: '/career',
+          element: <Careers />,
+        },
+        {
+          path: '/clothing',
+          element: <Clothing />,
+        },
+        {
+          path: '/design',
+          element: <Design />,
+        },
+        {
+          path: '/product',
+          element: <Product />,
+        },
+        {
+          path: '/music',
+          element: <Music />,
+        },
+        {
+          path: '/digital',
+          element: <Digital />,
+        },
+        {
+          path: '/marketing',
+          element: <Marketing />,
+        },
+        {
+          path: '/graphic',
+          element: <Graphic />,
+        },
+        {
+          path: '/technology',
+          element: <Technology />,
+        },
+        {
+          path: '/video',
+          element: <Video />,
+        },
+        {
+          path: '/audio',
+          element: <Audio />,
+        },
+        {
+          path: '/song',
+          element: <Song />,
+        },
+        {
+          path: '/program',
+          element: <Program />,
+        },
+        {
+          path: '/virtual',
+          element: <Virtual />,
+        },
+        {
+          path: '/fashion',
+          element: <Fashion />,
+        },
+        {
+          path: '/media',
+          element: <Media />,
         },
       ],
     },

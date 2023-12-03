@@ -1,13 +1,13 @@
 import React from 'react';
-import Backimg1 from '../../../../../../../../img/30324.jpg';
-import Backimg2 from '../../../../../../../../img/SLIDE 1_edited.jpg';
-import Backimg4 from '../../../../../../../../img/excel.webp';
-import Backimg5 from '../../../../../../../../img/collab.avif';
-import Backimg6 from '../../../../../../../../img/innovative.avif';
-import Backimg7 from '../../../../../../../../img/development.avif';
-import Backimg8 from '../../../../../../../../img/ethical.webp';
-import Backimg9 from '../../../../../../../../img/global.avif';
-import Backimg10 from '../../../../../../../../img/community.avif';
+import Backimg1 from '/img/30324.jpg';
+import Backimg2 from '/img/SLIDE 1_edited.jpg';
+import Backimg4 from '/img/excel.webp';
+import Backimg5 from '/img/collab.avif';
+import Backimg6 from '/img/innovative.avif';
+import Backimg7 from '/img/development.avif';
+import Backimg8 from '/img/ethical.webp';
+import Backimg9 from '/img/global.avif';
+import Backimg10 from '/img/community.avif';
 
 import './about.scss';
 

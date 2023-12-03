@@ -237,7 +237,11 @@
 @media screen and (max-width: 767px) {
   .navbar {
     width: 100%;
-    display: none;
+
+    .nav-btn {
+      visibility: visible;
+      opacity: 1;
+    }
 
     .container {
       padding: 20px;
@@ -261,10 +265,7 @@
     }
   }
 
-  .nav-btn {
-    visibility: visible;
-    opacity: 1;
-  }
+
 
   .nav-items {
     position: fixed;

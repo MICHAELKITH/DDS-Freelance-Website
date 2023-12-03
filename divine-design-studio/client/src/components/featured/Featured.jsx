@@ -1,11 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Featured.scss';
 import { useNavigate } from 'react-router-dom';
-
-import Backimg1 from '../../../../../../../../img/SLIDE 1.jpg';
-import Backimg2 from '../../../../../../../../img/SLIDE 2.jpg';
-import Backimg3 from '../../../../../../../../img/SLIDE 3.jpg';
-import Backimg4 from '../../../../../../../../img/SLIDE 4.jpg';
 
 function Featured() {
   const [input, setInput] = useState('');
@@ -36,15 +31,15 @@ function Featured() {
                 onChange={(e) => setInput(e.target.value)}
               />
             </div>
-            <button onClick={handleSubmit}>Search</button>
+            <button type="button" onClick={handleSubmit}>Search</button>
           </div>
           <div className="popular">
             <span>Popular:</span>
-            <button>Technology</button>
-            <button>Music</button>
-            <button>Clothing</button>
-            <button>Design</button>
-            <button>Marketing</button>
+            <button type="button">Technology</button>
+            <button type="button">Music</button>
+            <button type="button">Clothing</button>
+            <button type="button">Design</button>
+            <button type="button">Marketing</button>
           </div>
         </div>
 

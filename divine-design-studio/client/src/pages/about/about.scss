@@ -13,7 +13,7 @@
 
     h1,
     p {
-      color: #fff;
+      color: #f8f2f2;
       font-size: 5rem;
       font-weight: 700;
       line-height: 1.2;
@@ -115,25 +115,63 @@
 
 @media screen and (max-width: 768px) {
   .about-page {
-    display: flex;
-    flex-direction: column;
     width: 100%;
 
-    .culture {
-      font-size: 10px;
-      max-width: max-content;
+    .about-culture {
+      flex-direction: column;
+      margin: 1rem;
+      margin-top: -10rem;
+      max-width: 95%;
 
-      p,
-      h1 {
-        line-height: 1;
+      p {
+        margin-top: 1rem;
+        font-size: 15px;
+      }
+
+      img {
+        margin-top: 13px;
+        margin-left: 1rem;
+        width: 50%;
+      }
+    }
+
+    .about-sect {
+      flex-direction: column;
+      margin-top: 02rem;
+    }
+
+    .culture {
+      max-width: 100%;
+
+      h1,
+      p {
+        font-size: 2rem;
         padding-left: 1rem;
       }
     }
 
-    .about-culture {
+    .about-sect {
+      margin-top: 1rem;
       display: flex;
       flex-direction: column;
-      margin-right: 100rem;
+      justify-content: center;
+      align-items: center;
+      display: none;
+
+      hr {
+        display: none;
+      }
+
+      .overview {
+        h3 {
+          font-size: 10px;
+          margin-left: 10px;
+        }
+
+        .banner {
+          display: none;
+        }
+      }
     }
   }
 }

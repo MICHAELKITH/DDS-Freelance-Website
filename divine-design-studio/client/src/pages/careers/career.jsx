@@ -1,12 +1,10 @@
 import React from 'react';
 import Backimg1 from '/img/30324.jpg';
 
-import './spiritual.scss';
-
-const spiritual = () => (
+const career = () => (
   <div className="about-page">
     <div className="culture">
-      <h1>Spiritual Entrepreneurship</h1>
+      <h1>Careers</h1>
     </div>
 
     <div className="about-culture">
@@ -19,4 +17,4 @@ const spiritual = () => (
   </div>
 );
 
-export default spiritual;
+export default career;

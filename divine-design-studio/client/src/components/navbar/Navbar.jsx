@@ -1,8 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
-// import { FaBars, FaTimes } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import newRequest from '../../utils/newRequest';
-import DDS from '../../../../../../../../img/DDS.png';
+import DDS from '/img/DDS.png';
 
 import './Navbar.scss';
 
@@ -11,21 +10,21 @@ function Navbar() {
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-  const [becomeFreelancerDropdownOpen, setbecomeFreelancerDropdownOpen] = useState(false);
+  const [becomeFreelancerDropdownOpen,  setBecomeFreelancerDropdownOpen] = useState(false);
 
   const toggleClientsDropdown = () => {
     setClientsDropdownOpen(!clientsDropdownOpen);
     setProductsDropdownOpen(false);
     setServicesDropdownOpen(false);
     setAboutDropdownOpen(false);
-    setbecomeFreelancerDropdownOpen(false);
+    setBecomeFreelancerDropdownOpen(false);
   };
   const toggleAboutDropdown = () => {
     setAboutDropdownOpen(!aboutDropdownOpen);
     setClientsDropdownOpen(false);
     setProductsDropdownOpen(false);
     setServicesDropdownOpen(false);
-    setbecomeFreelancerDropdownOpen(false);
+    setBecomeFreelancerDropdownOpen(false);
   };
 
   const toggleProductsDropdown = () => {
@@ -33,7 +32,7 @@ function Navbar() {
     setClientsDropdownOpen(false);
     setServicesDropdownOpen(false);
     setAboutDropdownOpen(false);
-    setbecomeFreelancerDropdownOpen(false);
+    setBecomeFreelancerDropdownOpen(false);
   };
 
   const toggleServicesDropdown = () => {
@@ -41,7 +40,7 @@ function Navbar() {
     setClientsDropdownOpen(false);
     setProductsDropdownOpen(false);
     setAboutDropdownOpen(false);
-    setbecomeFreelancerDropdownOpen(false);
+    setBecomeFreelancerDropdownOpen(false);
   };
 
   const closeAllDropdowns = () => {
@@ -49,10 +48,10 @@ function Navbar() {
     setClientsDropdownOpen(false);
     setProductsDropdownOpen(false);
     setServicesDropdownOpen(false);
-    setbecomeFreelancerDropdownOpen(false);
+    setBecomeFreelancerDropdownOpen(false);
   };
   const toggleBecomeFreelancerDropdownOpen = () => {
-    setbecomeFreelancerDropdownOpen(!becomeFreelancerDropdownOpen);
+    setBecomeFreelancerDropdownOpen(!becomeFreelancerDropdownOpen);
     setProductsDropdownOpen(false);
     setServicesDropdownOpen(false);
     setAboutDropdownOpen(false);
@@ -103,7 +102,7 @@ function Navbar() {
       localStorage.setItem('currentUser', null);
       navigate('/');
     } catch (err) {
-      console.log(err);
+      return err
     }
   };
 
@@ -134,7 +133,7 @@ function Navbar() {
                   <Link className="dropdown-link" to="/team">
                     Meet the Team
                   </Link>
-                  <Link className="dropdown-link" to="/team">
+                  <Link className="dropdown-link" to="/spiritual">
                     Spiritual Entrepreneurship
                   </Link>
                 </div>
@@ -149,12 +148,6 @@ function Navbar() {
               <span className="link">Our Works</span>
               {clientsDropdownOpen && (
                 <div className="dropdown-content">
-                  {/* <Link className="dropdown-link" to="/client1">
-                    Client 1
-                  </Link>
-                  <Link className="dropdown-link" to="/client2">
-                    Client 2
-                  </Link> */}
                 </div>
               )}
             </div>
@@ -166,19 +159,19 @@ function Navbar() {
               <span className="link">Divisions</span>
               {productsDropdownOpen && (
                 <div className="dropdown-content">
-                  <Link className="dropdown-link" to="/product1">
+                  <Link className="dropdown-link" to="/clothing">
                     Clothing
                   </Link>
-                  <Link className="dropdown-link" to="/product2">
+                  <Link className="dropdown-link" to="/music">
                     Music
                   </Link>
-                  <Link className="dropdown-link" to="/product2">
+                  <Link className="dropdown-link" to="/design">
                     Design
                   </Link>
-                  <Link className="dropdown-link" to="/product2">
+                  <Link className="dropdown-link" to="/technology">
                     Technology
                   </Link>
-                  <Link className="dropdown-link" to="/product2">
+                  <Link className="dropdown-link" to="/marketing">
                     Marketing
                   </Link>
                 </div>
@@ -192,34 +185,34 @@ function Navbar() {
               <span className="link">Services</span>
               {servicesDropdownOpen && (
                 <div className="dropdown-content">
-                  <Link className="dropdown-link" to="/service1">
+                  <Link className="dropdown-link" to="/graphic">
                     Graphics & Design
                   </Link>
-                  <Link className="dropdown-link" to="/service2">
+                  <Link className="dropdown-link" to="/video">
                     Video & Animation
                   </Link>
-                  <Link className="dropdown-link" to="/service1">
+                  <Link className="dropdown-link" to="/digital">
                     Digital Marketing
                   </Link>
-                  <Link className="dropdown-link" to="/service2">
+                  <Link className="dropdown-link" to="/product">
                     Product Development
                   </Link>
-                  <Link className="dropdown-link" to="/service1">
+                  <Link className="dropdown-link" to="/audio">
                     Music & Audio
                   </Link>
-                  <Link className="dropdown-link" to="/service2">
+                  <Link className="dropdown-link" to="/song">
                     Song Writing
                   </Link>
-                  <Link className="dropdown-link" to="/service1">
+                  <Link className="dropdown-link" to="/program">
                     Programming & Tech
                   </Link>
-                  <Link className="dropdown-link" to="/service2">
+                  <Link className="dropdown-link" to="/virtual">
                     Virtual Reality
                   </Link>
-                  <Link className="dropdown-link" to="/service1">
+                  <Link className="dropdown-link" to="/fashion">
                     Fashion Design
                   </Link>
-                  <Link className="dropdown-link" to="/service2">
+                  <Link className="dropdown-link" to="/media">
                     Media & Production
                   </Link>
                 </div>
@@ -236,7 +229,7 @@ function Navbar() {
               {becomeFreelancerDropdownOpen && (
               <div className="dropdown-content">
 
-                <Link className="dropdown-link" to="/become-freelancer">
+                <Link className="dropdown-link" to="/career">
                   Careers
                 </Link>
 
