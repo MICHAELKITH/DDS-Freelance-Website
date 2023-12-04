@@ -271,20 +271,21 @@ function Navbar() {
                   Sign in
                 </Link>
                 <Link className="link" to="/register">
-                  <button>Create Account</button>
+                <button type='button' style={{ border: "1px solid white" }}>Create Account</button>
+
                 </Link>
               </>
             )}
 
             <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-              <svg viewBox="0 0 470 1000" fill="red" height="2em" width="1em">
+              <svg viewBox="0 0 470 1000" fill="white" height="3em" width="4em">
                 <path d="M452 656c12 12 18 26.333 18 43s-6 31-18 43c-12 10.667-26.333 16-43 16s-31-5.333-43-16L234 590 102 742c-12 10.667-26.333 16-43 16s-31-5.333-43-16C5.333 730 0 715.667 0 699s5.333-31 16-43l138-156L16 342C5.333 330 0 315.667 0 299s5.333-31 16-43c12-10.667 26.333-16 43-16s31 5.333 43 16l132 152 132-152c12-10.667 26.333-16 43-16s31 5.333 43 16c12 12 18 26.333 18 43s-6 31-18 43L314 500l138 156" />
               </svg>
             </button>
           </nav>
 
           <button className="nav-btn" onClick={showNavbar}>
-            <svg viewBox="0 0 1 16" fill="red" height="1em" width="2em">
+            <svg viewBox="0 0 1 16" fill="white" height="2em" width="4em">
               <path
                 fillRule="evenodd"
                 d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"
@@ -293,31 +294,6 @@ function Navbar() {
           </button>
         </div>
       </div>
-
-      {/* {(active || pathname !== "/") && (
-        <>
-          <hr />
-          <div className="menu">
-            <Link className="link menuLink" to="/">
-              Marketing
-            </Link>
-            <Link className="link menuLink" to="/">
-              Design
-            </Link>
-            <Link className="link menuLink" to="/">
-              Technology
-            </Link>
-            <Link className="link menuLink" to="/">
-              Clothing
-            </Link>
-            <Link className="link menuLink" to="/">
-              Music
-            </Link>
-
-          </div>
-          <hr />
-        </>
-      )} */}
     </div>
   );
 }
