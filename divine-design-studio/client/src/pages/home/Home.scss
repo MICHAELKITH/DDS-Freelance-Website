@@ -181,7 +181,7 @@
       word-wrap: break-word;
       overflow-wrap: break-word;
       padding-left: 10px;
-      margin-top: -9rem;
+      margin-top: -4rem;
 
       .item {
         h1 {
@@ -193,8 +193,9 @@
   }
 
   .home .features .container .item video {
-    width: 300px;
-    margin-right: 2.5rem;
+    width: 350px;
+    margin-right: 1.5rem;
+   
   }
 
   .home .features .container .item .title {
@@ -242,5 +243,8 @@
   .home .features .container .item img {
     width: 85%;
     height: 50vh;
+    justify-content: center;
+    align-items: center;
+    margin-left: 18px;
   }
 }

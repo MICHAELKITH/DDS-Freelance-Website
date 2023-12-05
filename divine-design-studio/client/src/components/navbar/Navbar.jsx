@@ -6,6 +6,11 @@ import DDS from '/img/DDS.png';
 import './Navbar.scss';
 
 function Navbar() {
+
+  const handleLinkClick = () => {
+    closeAllDropdowns(); // Function to close all dropdowns
+    showNavbar(); // Function to hide the navbar (if needed)
+  };
   const [clientsDropdownOpen, setClientsDropdownOpen] = useState(false);
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
@@ -116,7 +121,8 @@ function Navbar() {
         </div>
         <div className="links">
           <nav className="nav-items" ref={navRef}>
-            <Link className="link" to="/">
+        
+            <Link className="link" to="/"onClick={handleLinkClick}>
               <span>Home</span>
             </Link>
             <div
@@ -127,13 +133,13 @@ function Navbar() {
               <span className="link">About</span>
               {aboutDropdownOpen && (
                 <div className="dropdown-content">
-                  <Link className="dropdown-link" to="/about">
+                  <Link className="dropdown-link" to="/about" onClick={handleLinkClick}>
                     Who We Are
                   </Link>
-                  <Link className="dropdown-link" to="/team">
+                  <Link className="dropdown-link" to="/team" onClick={handleLinkClick}>
                     Meet the Team
                   </Link>
-                  <Link className="dropdown-link" to="/spiritual">
+                  <Link className="dropdown-link" to="/spiritual" onClick={handleLinkClick}>
                     Spiritual Entrepreneurship
                   </Link>
                 </div>
@@ -159,19 +165,19 @@ function Navbar() {
               <span className="link">Divisions</span>
               {productsDropdownOpen && (
                 <div className="dropdown-content">
-                  <Link className="dropdown-link" to="/clothing">
+                  <Link className="dropdown-link" to="/clothing"onClick={handleLinkClick}>
                     Clothing
                   </Link>
-                  <Link className="dropdown-link" to="/music">
+                  <Link className="dropdown-link" to="/music"onClick={handleLinkClick}>
                     Music
                   </Link>
-                  <Link className="dropdown-link" to="/design">
+                  <Link className="dropdown-link" to="/design"onClick={handleLinkClick}>
                     Design
                   </Link>
-                  <Link className="dropdown-link" to="/technology">
+                  <Link className="dropdown-link" to="/technology"onClick={handleLinkClick}>
                     Technology
                   </Link>
-                  <Link className="dropdown-link" to="/marketing">
+                  <Link className="dropdown-link" to="/marketing"onClick={handleLinkClick}>
                     Marketing
                   </Link>
                 </div>
@@ -185,34 +191,34 @@ function Navbar() {
               <span className="link">Services</span>
               {servicesDropdownOpen && (
                 <div className="dropdown-content">
-                  <Link className="dropdown-link" to="/graphic">
+                  <Link className="dropdown-link" to="/graphic"onClick={handleLinkClick}>
                     Graphics & Design
                   </Link>
-                  <Link className="dropdown-link" to="/video">
+                  <Link className="dropdown-link" to="/video"onClick={handleLinkClick}>
                     Video & Animation
                   </Link>
-                  <Link className="dropdown-link" to="/digital">
+                  <Link className="dropdown-link" to="/digital"onClick={handleLinkClick}>
                     Digital Marketing
                   </Link>
-                  <Link className="dropdown-link" to="/product">
+                  <Link className="dropdown-link" to="/product"onClick={handleLinkClick}>
                     Product Development
                   </Link>
-                  <Link className="dropdown-link" to="/audio">
+                  <Link className="dropdown-link" to="/audio"onClick={handleLinkClick}>
                     Music & Audio
                   </Link>
-                  <Link className="dropdown-link" to="/song">
+                  <Link className="dropdown-link" to="/song"onClick={handleLinkClick}>
                     Song Writing
                   </Link>
-                  <Link className="dropdown-link" to="/program">
+                  <Link className="dropdown-link" to="/program"onClick={handleLinkClick}>
                     Programming & Tech
                   </Link>
-                  <Link className="dropdown-link" to="/virtual">
+                  <Link className="dropdown-link" to="/virtual"onClick={handleLinkClick}>
                     Virtual Reality
                   </Link>
-                  <Link className="dropdown-link" to="/fashion">
+                  <Link className="dropdown-link" to="/fashion"onClick={handleLinkClick}>
                     Fashion Design
                   </Link>
-                  <Link className="dropdown-link" to="/media">
+                  <Link className="dropdown-link" to="/media"onClick={handleLinkClick}>
                     Media & Production
                   </Link>
                 </div>
@@ -229,7 +235,7 @@ function Navbar() {
               {becomeFreelancerDropdownOpen && (
               <div className="dropdown-content">
 
-                <Link className="dropdown-link" to="/career">
+                <Link className="dropdown-link" to="/career"onClick={handleLinkClick}>
                   Careers
                 </Link>
 
@@ -271,7 +277,7 @@ function Navbar() {
                   Sign in
                 </Link>
                 <Link className="link" to="/register">
-                <button type='button' style={{ border: "1px solid white" }}>Create Account</button>
+                <button className="create" type='button' style={{ border: "1px solid white" }}>Create Account</button>
 
                 </Link>
               </>

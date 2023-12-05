@@ -11,13 +11,50 @@
     position: relative;
     padding-top: -10px;
     padding-right: 2rem;
+
+    .slide1 {
+      position: relative;
+      max-width: 100%;
+      overflow: visible;
+
+
+      .carousel-prev,
+      .carousel-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.7);
+        border: none;
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .carousel-prev {
+        left: -50px; /* Position the previous button outside the left side */
+      }
+      
+      .carousel-next {
+        right: -50px; /* Position the next button outside the right side */
+      }
+
+
+      .carousel-prev:hover,
+      .carousel-next:hover {
+        background-color: gold;
+        color: white;
+      }
+    }
+
+    .topics {
+      padding-bottom: 2rem;
+      color: white;
+      font-size: 4rem;
+    }
   }
 
-  .topics {
-    padding-bottom: 2rem;
-    color: white;
-    font-size: 4rem;
-  }
+
 
   .carousel-initialized {
     position: static;
@@ -41,18 +78,61 @@
 }
 
 @media screen and (max-width: 768px) {
+
   .slide {
     width: 100%;
-  }
 
-  .slide .topics {
-    font-size: 2rem;
-    padding-left: 38px;
-    padding-top: -20px;
-  }
+    .container {
 
-  .slide1 {
-    display: grid;
-    gap: 10rem;
+      .slide1 {
+
+        .carousel-slide  img {
+          margin: 0 4rem; /* Center the images on small screens */
+          display: block;
+          max-width: 100%;
+          height: auto;
+          
+        }
+        .carousel-prev,
+        .carousel-next {
+          display: block;
+          /*Showbuttonsforsmallerscreens*/
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: rgba(255, 255, 255, 0.7);
+          border: none;
+          padding: 10px;
+          border-radius: 50%;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          -o-transform: translateY(-50%);
+}
+    
+        .carousel-prev {
+          left:-10px; /* Position the previous button outside the left side */
+        }
+    
+        .carousel-next {
+          right: -32px; /* Position the next button outside the right side */
+        }
+    
+        .carousel-prev:hover,
+        .carousel-next:hover {
+          background-color: gold;
+          color: white;
+        }
+      }
+
+      .topics {
+        font-size: 2rem;
+        padding-left: 38px;
+        padding-top: -20px;
+
+      }
+    }
   }
 }

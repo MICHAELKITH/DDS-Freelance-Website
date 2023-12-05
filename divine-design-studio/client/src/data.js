@@ -29,6 +29,7 @@ export const cards = [
     desc: 'Engage your audience',
     img: './img/clothing.jpeg',
   },
+  
 ];
 
 export const projects = [

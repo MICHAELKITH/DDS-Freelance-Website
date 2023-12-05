@@ -1,15 +1,21 @@
 .catCard {
   width: 252px;
   height: 344px;
-  color: #c9bb16;
+
   border-radius: 5px;
   position: relative;
   cursor: pointer;
+ 
+
 
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+  //   display: grid;
+  // grid-template-columns: auto auto auto;
+  // grid-template-rows: auto auto;
+  // grid-gap: 10px;
+  // padding: 10px;
   }
 
   .desc {
@@ -28,25 +34,33 @@
   }
 
   @media screen and (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    width: 80px;
-    height: 134px;
-    padding-left: 15px;
-    gap: 55px;
+    
 
-    img {
-      width: 100%;
-      height: 50%;
-      object-fit: cover;
-      display: block;
-      display: list-item;
-    }
 
-    .desc,
-    .title {
-      position: static;
-      font-size: 16px;
-    }
-  }
+
+
+
+
+    
+  //   display: flex;
+  //   flex-direction: column;
+  //   width: 100%;
+  //   height: 10vh;
+  //   padding-left: 15px;
+  //   gap: 100px;
+
+  //   img {
+  //     width: 100%;
+  //     height: 90vh;
+      
+      
+  //   }
+
+  //   .desc,
+  //   .title {
+  //     position: static;
+  //     font-size: 16px;
+  //   }
+  // }
+}
 }
