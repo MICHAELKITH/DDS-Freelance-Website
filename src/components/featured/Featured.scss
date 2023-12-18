@@ -1,0 +1,109 @@
+/* Default styles for all devices */
+.featured {
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  background-color: #101010;
+  color: white;
+  position: relative;
+  width: 100%;
+
+  .icon-images {
+    position: absolute;
+    top: -12rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    display: flex;
+
+
+    img {
+      width: 243px;
+      height: 142px;
+
+
+      &:nth-child(1) {
+
+
+        margin-top: 301px;
+        left: 112px;
+
+      }
+
+      &:nth-child(2) {
+
+
+        margin-top: 230px;
+        left: 356px;
+
+      }
+
+      &:nth-child(3) {
+
+
+        margin-top: 193px;
+        left: 600px;
+
+      }
+
+      &:nth-child(4) {
+
+
+        margin-top: 230px;
+        left: 842px;
+
+      }
+
+      &:nth-child(5) {
+
+        margin-top: 301px;
+        left: 1085px;
+
+      }
+
+    }
+  }
+
+  @keyframes rotateImages {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .main-featured {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+
+    img {
+      width: 317px;
+      height: 535px;
+      top: 204px;
+      left: 513px;
+      border: 3px;
+      border-radius: 203px;
+      -webkit-border-radius: 203px;
+      -moz-border-radius: 203px;
+      -ms-border-radius: 203px;
+      -o-border-radius: 203px;
+    }
+
+
+    .consult {
+      width: 238px;
+      height: 70px;
+      display: none;
+      
+    }
+  }
+
+}
+
+
+
+@media screen and (max-width: 768px) {}

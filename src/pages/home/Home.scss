@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  width: 100%;
+
+  .features {
+    background-color: #f1fdf7;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+    background: black;
+
+    &.dark {
+      background-color: #0d084d;
+
+      h1 {
+        color: white !important;
+      }
+
+      i {
+        font-weight: 300;
+      }
+
+      p {
+        margin-bottom: 20px;
+        color: white !important;
+      }
+
+      .title {
+        color: white !important;
+        font-weight: 300 !important;
+        font-size: 14px !important;
+      }
+
+      button {
+        background-color: #ffd700;
+        border: none;
+        color: rgb(8, 8, 8);
+        padding: 10px 20px;
+        border-radius: 5px;
+        width: max-content;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+    }
+
+    .container {
+      width: 1400px;
+      display: flex;
+      align-items: center;
+      gap: 200px;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        &:first-child {
+          flex: 2;
+        }
+
+        &:last-child {
+          flex: 3;
+        }
+
+        img {
+          width: 100%;
+          border-radius: 5px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -ms-border-radius: 5px;
+          -o-border-radius: 5px;
+        }
+
+        h1 {
+          font-weight: 500;
+          margin-bottom: 10px;
+          color: #ffd700 !important;
+        }
+
+        .title {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-weight: 700;
+          font-size: 24px;
+          color: #ffd700;
+
+          img {
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        p {
+          font-size: 18px;
+          font-weight: 300;
+          color: #ffd700;
+          line-height: 28px;
+          letter-spacing: 1px;
+        }
+
+        video {
+          width: 720px;
+        }
+      }
+    }
+  }
+
+  .explore {
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+    background-color: black;
+
+    .container {
+      width: 1400px;
+
+      h1 {
+        color: #ffd700 !important;
+      }
+
+      .items {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .item {
+          width: 250px;
+          height: 150px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          cursor: pointer;
+
+          img {
+            width: 50px;
+            height: 50px;
+          }
+
+          .line {
+            width: 50px;
+            height: 2px;
+            background-color: lightgray;
+            transition: all 0.3s ease;
+          }
+
+          span {
+            font-weight: 300;
+            color: white;
+          }
+
+          &:hover {
+            .line {
+              width: 80px;
+              background-color: #1dbf73;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .features {
+    width: 100%;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      padding-left: 10px;
+      margin-top: -4rem;
+
+      .item {
+        h1 {
+          font-size: 1.2rem;
+          line-break: auto;
+        }
+      }
+    }
+  }
+
+  .home .features .container .item video {
+    width: 350px;
+    margin-right: 1.5rem;
+   
+  }
+
+  .home .features .container .item .title {
+    font-size: 0.83rem;
+    color: white;
+  }
+
+  .home .features .container .item p {
+    font-size: 0.9rem;
+  }
+
+  .home .explore .container {
+    h1 {
+      padding-left: 20px;
+      font-size: 25px;
+    }
+
+    .items {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+    }
+  }
+
+  .home .features .container .item h1 {
+    color: rgb(209, 67, 67);
+  }
+
+  .home .explore {
+    width: 100%;
+  }
+
+  .home .explore .container .items .item {
+    width: 100%;
+  }
+
+  .home .explore .container .items .item > svg {
+    width: 35px;
+  }
+
+  .home .explore .container .items .item span {
+    font-weight: 100;
+    color: gold;
+  }
+
+  .home .features .container .item img {
+    width: 85%;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    margin-left: 18px;
+  }
+}

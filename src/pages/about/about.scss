@@ -1,0 +1,177 @@
+.about-page {
+  width: 100%;
+  background: white;
+
+  .culture {
+    width: 100%;
+    background-image: url(https://designwithma.com/wp-content/themes/ma-design/images/bg/pattern-plus-angled-blackorange-seamless.png);
+    background-color: black;
+    background-position: right top;
+    background-repeat: repeat-y;
+    background-size: 50%;
+    min-height: 400px;
+
+    h1,
+    p {
+      color: #f8f2f2;
+      font-size: 5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      padding-left: 15rem;
+    }
+
+    p {
+      font-size: 2rem;
+      font-weight: 350;
+    }
+  }
+
+  .about-culture {
+    width: 100%;
+    display: flex;
+    background: gold;
+    margin: 35rem;
+    margin-top: -10rem;
+    max-height: 400px;
+
+    p {
+      font-size: 2em;
+      margin-top: 10rem;
+      margin-left: 1rem;
+      color: black;
+    }
+
+    img {
+      width: 20%;
+      height: 10%;
+      margin-right: 45rem;
+      margin-top: 8rem;
+    }
+  }
+
+  .about-sect {
+    margin-top: -26rem;
+
+    hr {
+      width: 50%;
+      margin-left: 32%;
+    }
+
+    .overview {
+      margin: 1rem;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      justify-content: center;
+      align-items: center;
+      margin-inline-start: 35rem;
+
+      .banner {
+        display: flex;
+        gap: 2rem;
+
+        img {
+          width: 30%;
+          margin-left: 7rem;
+        }
+
+        p {
+          word-spacing: normal;
+          word-wrap: break-word;
+          line-break: normal;
+          justify-content: center;
+
+          span {
+            padding-top: 10rem;
+          }
+        }
+      }
+
+      h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fa4616;
+        font-size: 3.75rem;
+        line-height: 1.2;
+        margin-bottom: 3rem;
+        margin-right: 32rem;
+        word-break: keep-all;
+      }
+
+      h3 {
+        font-size: 1.1875rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+        margin-right: 34rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-page {
+    width: 100%;
+
+    .about-culture {
+      flex-direction: column;
+      margin: 1rem;
+      margin-top: -10rem;
+      max-width: 95%;
+
+      p {
+        margin-top: 1rem;
+        font-size: 15px;
+      }
+
+      img {
+        margin-top: 13px;
+        margin-left: 1rem;
+        width: 50%;
+      }
+    }
+
+    .about-sect {
+      flex-direction: column;
+      margin-top: 02rem;
+    }
+
+    .culture {
+      max-width: 100%;
+
+      h1,
+      p {
+        font-size: 2rem;
+        padding-left: 1rem;
+      }
+    }
+
+    .about-sect {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      display: none;
+
+      hr {
+        display: none;
+      }
+
+      .overview {
+        h3 {
+          font-size: 10px;
+          margin-left: 10px;
+        }
+
+        .banner {
+          display: none;
+        }
+      }
+    }
+  }
+}

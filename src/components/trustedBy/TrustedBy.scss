@@ -1,0 +1,45 @@
+.trustedBy {
+  background-color: #fafafa;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+
+  .container {
+    max-width: 760px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: goldenrod;
+    font-weight: 700;
+    font-size: 1.6rem;
+
+    li {
+      width: 242px;
+      display: flex;
+      height: 58px;
+      top: 1049px;
+      left: 54px;
+      border: 0.88px;
+      line-height: 55px;
+      color: #FFFFFF;
+      cursor: pointer;
+      &:hover{
+        color: gold;
+
+        
+      }
+    }
+    
+  }
+}
+
+@media screen and (max-width: 768px) {
+  // .trustedBy{
+  //   margin-bottom: 1000px;
+  // }
+  .trustedBy .container {
+    font-size: 0.8rem;
+    color: gold;
+  }
+}
