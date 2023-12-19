@@ -1,3 +1,13 @@
+
+@font-face {
+  font-family: 'Bodoni MT Black';
+  src: local('Bodoni MT Black'), url('path/to/BodoniMTBlack.woff') format('woff');
+  /* Replace 'path/to/BodoniMTBlack.woff' with the actual path to your font file */
+  font-weight: normal;
+  font-style: normal;
+
+
+  }
 .trustedBy {
   background-color: #fafafa;
   height: 100px;
@@ -6,26 +16,56 @@
   background-color: black;
 
   .container {
-    max-width: 760px;
     display: flex;
     align-items: center;
-    gap: 20px;
-    color: goldenrod;
+    color: gold;
     font-weight: 700;
     font-size: 1.6rem;
+    gap: 10rem;
+
+    .active{
+      color: white;
+    }
+
+    .img-dot{
+      display: flex;
+      gap: 10rem;
+
+      img{
+        width: 18px;
+        height: 18px;
+        margin-top: 1.2rem;
+
+      
+      }
+    }
 
     li {
-      width: 242px;
       display: flex;
-      height: 58px;
-      top: 1049px;
-      left: 54px;
+      margin-left: 204px;
       border: 0.88px;
       line-height: 55px;
-      color: #FFFFFF;
+   
+      font-style: italic;
+      font-family: sans-serif;
+      color: rgb(18, 17, 17);
+      text-shadow:
+          1px 1px 0 #100f0f,
+        -1px -1px 0 #fcfcf9,  
+         1px -1px 0 #000,
+         -1px 1px 0 #f3f1f1,
+          1px 1px 0 #d4c0c0;
+         font-size: 50px;
+     
+      gap: 50px;
+      
+
       cursor: pointer;
+
+      
+  
       &:hover{
-        color: gold;
+        color: #FFFFFF;
 
         
       }

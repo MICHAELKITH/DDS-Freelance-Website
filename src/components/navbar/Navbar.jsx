@@ -7,12 +7,12 @@ import "./Navbar.scss";
 
 function Navbar() {
   const handleLinkClick = () => {
-    closeAllDropdowns(); 
+    closeAllDropdowns();
     showNavbar();
   };
 
   const dropdownClass = (isOpen) => {
-    return isOpen ? 'dropdown open' : 'dropdown';
+    return isOpen ? "dropdown open" : "dropdown";
   };
 
   const toggleDropdownSmallDevices = (dropdownFunction) => {
@@ -114,8 +114,6 @@ function Navbar() {
     };
   }, []);
 
-
-
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
   const navigate = useNavigate();
@@ -150,18 +148,16 @@ function Navbar() {
               onClick={() => toggleDropdownSmallDevices(setAboutDropdownOpen)}
             >
               <div className="toggle-link">
-              <span className="link">About</span>
-              
-              <span
-                className="dropdown-toggle"
-                onClick={() => toggleDropdown(setAboutDropdownOpen)}
-              >
-                {aboutDropdownOpen ? "-" : "+"}
-              </span>
-              
+                <span className="link">About</span>
 
+                <span
+                  className="dropdown-toggle"
+                  onClick={() => toggleDropdown(setAboutDropdownOpen)}
+                >
+                  {aboutDropdownOpen ? "-" : "+"}
+                </span>
               </div>
-              
+
               {aboutDropdownOpen && (
                 <div className="dropdown-content">
                   <Link
@@ -394,18 +390,25 @@ function Navbar() {
             <h1 className="intro-link">Let’s discuss</h1>
 
             <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-              <svg viewBox="0 0 470 1000" fill="white" height="3em" width="4em">
-                <path d="M452 656c12 12 18 26.333 18 43s-6 31-18 43c-12 10.667-26.333 16-43 16s-31-5.333-43-16L234 590 102 742c-12 10.667-26.333 16-43 16s-31-5.333-43-16C5.333 730 0 715.667 0 699s5.333-31 16-43l138-156L16 342C5.333 330 0 315.667 0 299s5.333-31 16-43c12-10.667 26.333-16 43-16s31 5.333 43 16l132 152 132-152c12-10.667 26.333-16 43-16s31 5.333 43 16c12 12 18 26.333 18 43s-6 31-18 43L314 500l138 156" />
-              </svg>
+            <svg
+      viewBox="0 0 1024 1024"
+      fill="currentColor"
+      height="3em"
+      width="4em"
+    >
+      <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm165.4 618.2l-66-.3L512 563.4l-99.3 118.4-66.1.3c-4.4 0-8-3.5-8-8 0-1.9.7-3.7 1.9-5.2l130.1-155L340.5 359a8.32 8.32 0 01-1.9-5.2c0-4.4 3.6-8 8-8l66.1.3L512 464.6l99.3-118.4 66-.3c4.4 0 8 3.5 8 8 0 1.9-.7 3.7-1.9 5.2L553.5 514l130 155c1.2 1.5 1.9 3.3 1.9 5.2 0 4.4-3.6 8-8 8z" />
+    </svg>
             </button>
           </nav>
 
           <button className="nav-btn" onClick={showNavbar}>
-            <svg viewBox="0 0 1 16" fill="white" height="2em" width="4em">
-              <path
-                fillRule="evenodd"
-                d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"
-              />
+            <svg
+              viewBox="0 0 512 512"
+              fill="currentColor"
+              height="3em"
+              width="4em"
+            >
+              <path d="M0 96c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm64 160c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zm384 160c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h384c17.7 0 32 14.3 32 32z" />
             </svg>
           </button>
         </div>
