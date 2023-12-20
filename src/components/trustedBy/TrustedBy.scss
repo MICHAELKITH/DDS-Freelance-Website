@@ -1,13 +1,12 @@
-
 @font-face {
   font-family: 'Bodoni MT Black';
   src: local('Bodoni MT Black'), url('path/to/BodoniMTBlack.woff') format('woff');
+
   /* Replace 'path/to/BodoniMTBlack.woff' with the actual path to your font file */
   font-weight: normal;
   font-style: normal;
+}
 
-
-  }
 .trustedBy {
   background-color: #fafafa;
   height: 100px;
@@ -23,20 +22,18 @@
     font-size: 1.6rem;
     gap: 10rem;
 
-    .active{
+    .active {
       color: white;
     }
 
-    .img-dot{
+    .img-dot {
       display: flex;
-      gap: 10rem;
+      gap: 2rem;
 
-      img{
+      img {
         width: 18px;
         height: 18px;
-        margin-top: 1.2rem;
-
-      
+        margin-top: 0.4rem;
       }
     }
 
@@ -44,37 +41,29 @@
       display: flex;
       margin-left: 204px;
       border: 0.88px;
-      line-height: 55px;
-   
+      line-height: 35px;
       font-style: italic;
       font-family: sans-serif;
       color: rgb(18, 17, 17);
       text-shadow:
-          1px 1px 0 #100f0f,
-        -1px -1px 0 #fcfcf9,  
-         1px -1px 0 #000,
-         -1px 1px 0 #f3f1f1,
-          1px 1px 0 #d4c0c0;
-         font-size: 50px;
-     
-      gap: 50px;
-      
-
+        1px 1px 0 #100f0f,
+        -1px -1px 0 #fcfcf9,
+        1px -1px 0 #000,
+        -1px 1px 0 #f3f1f1,
+        1px 1px 0 #d4c0c0;
+      font-size: 20px;
+      gap: 20px;
       cursor: pointer;
 
-      
-  
-      &:hover{
-        color: #FFFFFF;
-
-        
+      &:hover {
+        color: #fff;
       }
     }
-    
   }
 }
 
 @media screen and (max-width: 768px) {
+
   // .trustedBy{
   //   margin-bottom: 1000px;
   // }

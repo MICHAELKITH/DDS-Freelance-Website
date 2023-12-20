@@ -1,13 +1,10 @@
-import React, { useState, useEffect } from "react";
-import "./Home.scss";
-import Featured from "../../components/featured/Featured";
-import TrustedBy from "../../components/trustedBy/TrustedBy";
-import Slide from "../../components/slide/Slide";
-import CatCard from "../../components/catCard/CatCard";
-import ProjectCard from "../../components/projectCard/ProjectCard";
-import { cards, projects } from "../../data";
-import vr from "/img/Group 4.png";
-import icon from "/img/icon.png";
+import React, { useState, useEffect } from 'react';
+import './Home.scss';
+import Featured from '../../components/featured/Featured';
+import TrustedBy from '../../components/trustedBy/TrustedBy';
+
+import vr from './img/Group 4.png';
+import icon from './img/icon.png';
 
 function Home() {
   return (
@@ -23,18 +20,28 @@ function Home() {
         <div className="container">
           <div className="item">
             <h1>
-              <b>Who we are Divine</b> Design Studio is a global marketplace hub
+              <b>Who we are Divine</b>
+              {' '}
+              Design Studio is a global marketplace hub
               for
-              <i> spiritual entrepreneurship</i>, empowering communities{" "}
+              <i> spiritual entrepreneurship</i>
+              , empowering communities
+              {' '}
               <img src={vr} alt="" />
-              through diverse talents, innovative services, and a{" "}
+              through diverse talents, innovative services, and a
+              {' '}
               <i>transformative digital platform.</i>
             </h1>
 
             <h2>
               We create and innovate products and services that strengthens
-              <b> faith-based organizations </b> to{" "}
-              <b>thrive, grow and unify</b> at the local, regional, and
+              <b> faith-based organizations </b>
+              {' '}
+              to
+              {' '}
+              <b>thrive, grow and unify</b>
+              {' '}
+              at the local, regional, and
               international level.
             </h2>
           </div>
@@ -199,13 +206,13 @@ function Home() {
       </div>
 
       <div className="about">
-        <div>
+        <div className="about-us">
           <h1>“Whatever you do, work at it with all your heart, as working for the Lord, not for human masters”</h1>
-          <p>Col 3:23</p>
-          <p>We have opportunities here at DDS for support and partnership and also for career and business opportunities</p>
-          <div>
-            <button>Explore DDS for Business</button>
-            <button>Become a partner</button>
+          <p className="col">Col 3:23</p>
+          <p className="dds">We have opportunities here at DDS for support and partnership and also for career and business opportunities</p>
+          <div className="view">
+            <button type="button">Explore DDS for Business</button>
+            <button type="button">Become a partner</button>
           </div>
         </div>
 

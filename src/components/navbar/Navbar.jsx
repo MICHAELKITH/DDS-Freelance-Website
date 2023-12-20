@@ -1,9 +1,9 @@
-import React, { useRef, useEffect, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import newRequest from "../../utils/newRequest";
-import DDS from "/img/DDS.png";
+import React, { useRef, useEffect, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import newRequest from '../../utils/newRequest';
+import DDS from '../../../../../../../../img/DDS.png';
 
-import "./Navbar.scss";
+import './Navbar.scss';
 
 function Navbar() {
   const handleLinkClick = () => {
@@ -11,9 +11,7 @@ function Navbar() {
     showNavbar();
   };
 
-  const dropdownClass = (isOpen) => {
-    return isOpen ? "dropdown open" : "dropdown";
-  };
+  const dropdownClass = (isOpen) => (isOpen ? 'dropdown open' : 'dropdown');
 
   const toggleDropdownSmallDevices = (dropdownFunction) => {
     if (window.innerWidth <= 768) {
@@ -31,8 +29,7 @@ function Navbar() {
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-  const [becomeFreelancerDropdownOpen, setBecomeFreelancerDropdownOpen] =
-    useState(false);
+  const [becomeFreelancerDropdownOpen, setBecomeFreelancerDropdownOpen] = useState(false);
 
   const toggleClientsDropdown = () => {
     setClientsDropdownOpen(!clientsDropdownOpen);
@@ -82,7 +79,7 @@ function Navbar() {
   const navRef = useRef();
 
   const showNavbar = () => {
-    navRef.current.classList.toggle("responsive_nav");
+    navRef.current.classList.toggle('responsive_nav');
   };
   const [active, setActive] = useState(false);
   const [open, setOpen] = useState(false);
@@ -94,9 +91,9 @@ function Navbar() {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", isActive);
+    window.addEventListener('scroll', isActive);
     return () => {
-      window.removeEventListener("scroll", isActive);
+      window.removeEventListener('scroll', isActive);
     };
   }, []);
 
@@ -107,29 +104,29 @@ function Navbar() {
       }
     };
 
-    document.body.addEventListener("click", closeDropdownOnBodyClick);
+    document.body.addEventListener('click', closeDropdownOnBodyClick);
 
     return () => {
-      document.body.removeEventListener("click", closeDropdownOnBodyClick);
+      document.body.removeEventListener('click', closeDropdownOnBodyClick);
     };
   }, []);
 
-  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
   const navigate = useNavigate();
 
   const handleLogout = async () => {
     try {
-      await newRequest.post("/auth/logout");
-      localStorage.setItem("currentUser", null);
-      navigate("/");
+      await newRequest.post('/auth/logout');
+      localStorage.setItem('currentUser', null);
+      navigate('/');
     } catch (err) {
       return err;
     }
   };
 
   return (
-    <div className={active || pathname !== "/" ? "navbar active" : "navbar"}>
+    <div className={active || pathname !== '/' ? 'navbar active' : 'navbar'}>
       <div className="container">
         <div className="logo">
           <Link className="link" to="/">
@@ -154,7 +151,7 @@ function Navbar() {
                   className="dropdown-toggle"
                   onClick={() => toggleDropdown(setAboutDropdownOpen)}
                 >
-                  {aboutDropdownOpen ? "-" : "+"}
+                  {aboutDropdownOpen ? '-' : '+'}
                 </span>
               </div>
 
@@ -191,7 +188,7 @@ function Navbar() {
               onMouseLeave={closeAllDropdowns}
             >
               <span className="link">Our Works</span>
-              {clientsDropdownOpen && <div className="dropdown-content"></div>}
+              {clientsDropdownOpen && <div className="dropdown-content" />}
             </div>
             <div
               className="dropdown"
@@ -344,7 +341,7 @@ function Navbar() {
             )}
             {currentUser ? (
               <div className="user" onClick={() => setOpen(!open)}>
-                <img src={currentUser.img || "/img/noavatar.jpg"} alt="" />
+                <img src={currentUser.img || '/img/noavatar.jpg'} alt="" />
                 <span>{currentUser?.username}</span>
                 {open && (
                   <div className="options">
@@ -379,7 +376,7 @@ function Navbar() {
                   <button
                     className="create"
                     type="button"
-                    style={{ border: "1px solid white" }}
+                    style={{ border: '1px solid white' }}
                   >
                     Create Account
                   </button>
@@ -390,14 +387,14 @@ function Navbar() {
             <h1 className="intro-link">Let’s discuss</h1>
 
             <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-            <svg
-      viewBox="0 0 1024 1024"
-      fill="currentColor"
-      height="3em"
-      width="4em"
-    >
-      <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm165.4 618.2l-66-.3L512 563.4l-99.3 118.4-66.1.3c-4.4 0-8-3.5-8-8 0-1.9.7-3.7 1.9-5.2l130.1-155L340.5 359a8.32 8.32 0 01-1.9-5.2c0-4.4 3.6-8 8-8l66.1.3L512 464.6l99.3-118.4 66-.3c4.4 0 8 3.5 8 8 0 1.9-.7 3.7-1.9 5.2L553.5 514l130 155c1.2 1.5 1.9 3.3 1.9 5.2 0 4.4-3.6 8-8 8z" />
-    </svg>
+              <svg
+                viewBox="0 0 1024 1024"
+                fill="currentColor"
+                height="3em"
+                width="4em"
+              >
+                <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm165.4 618.2l-66-.3L512 563.4l-99.3 118.4-66.1.3c-4.4 0-8-3.5-8-8 0-1.9.7-3.7 1.9-5.2l130.1-155L340.5 359a8.32 8.32 0 01-1.9-5.2c0-4.4 3.6-8 8-8l66.1.3L512 464.6l99.3-118.4 66-.3c4.4 0 8 3.5 8 8 0 1.9-.7 3.7-1.9 5.2L553.5 514l130 155c1.2 1.5 1.9 3.3 1.9 5.2 0 4.4-3.6 8-8 8z" />
+              </svg>
             </button>
           </nav>
 

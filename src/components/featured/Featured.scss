@@ -16,51 +16,34 @@
     z-index: 1;
     display: flex;
 
-
     img {
       width: 243px;
       height: 142px;
 
-
       &:nth-child(1) {
-
-
         margin-top: 301px;
         left: 112px;
-
       }
 
       &:nth-child(2) {
-
-
         margin-top: 230px;
         left: 356px;
-
       }
 
       &:nth-child(3) {
-
-
         margin-top: 193px;
         left: 600px;
-
       }
 
       &:nth-child(4) {
-
-
         margin-top: 230px;
         left: 842px;
-
       }
 
       &:nth-child(5) {
-
         margin-top: 301px;
         left: 1085px;
-
       }
-
     }
   }
 
@@ -93,22 +76,15 @@
       -o-border-radius: 203px;
     }
 
-
     .consult {
-
       margin-left: 45px;
-      img{
+
+      img {
         width: 240px;
-      height: 70px;
+        height: 70px;
       }
-      
-    
-      
     }
   }
-
 }
-
-
 
 @media screen and (max-width: 768px) {}

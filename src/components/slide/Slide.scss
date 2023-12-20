@@ -17,7 +17,6 @@
       max-width: 100%;
       overflow: visible;
 
-
       .carousel-prev,
       .carousel-next {
         position: absolute;
@@ -34,11 +33,10 @@
       .carousel-prev {
         left: -50px; /* Position the previous button outside the left side */
       }
-      
+
       .carousel-next {
         right: -50px; /* Position the next button outside the right side */
       }
-
 
       .carousel-prev:hover,
       .carousel-next:hover {
@@ -53,8 +51,6 @@
       font-size: 4rem;
     }
   }
-
-
 
   .carousel-initialized {
     position: static;
@@ -78,25 +74,23 @@
 }
 
 @media screen and (max-width: 768px) {
-
   .slide {
     width: 100%;
 
     .container {
-
       .slide1 {
-
-        .carousel-slide  img {
+        .carousel-slide img {
           margin: 0 4rem; /* Center the images on small screens */
           display: block;
           max-width: 100%;
           height: auto;
-          
         }
+
         .carousel-prev,
         .carousel-next {
           display: block;
-          /*Showbuttonsforsmallerscreens*/
+
+          /* Showbuttonsforsmallerscreens */
           position: absolute;
           top: 50%;
           transform: translateY(-50%);
@@ -110,16 +104,16 @@
           -moz-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
           -o-transform: translateY(-50%);
-}
-    
-        .carousel-prev {
-          left:-10px; /* Position the previous button outside the left side */
         }
-    
+
+        .carousel-prev {
+          left: -10px; /* Position the previous button outside the left side */
+        }
+
         .carousel-next {
           right: -32px; /* Position the next button outside the right side */
         }
-    
+
         .carousel-prev:hover,
         .carousel-next:hover {
           background-color: gold;
@@ -131,7 +125,6 @@
         font-size: 2rem;
         padding-left: 38px;
         padding-top: -20px;
-
       }
     }
   }
